@@ -1,8 +1,7 @@
 <%@ Page Language="C#" %>
 <html>
 <head>
-<script runat="server">
-<script src="//synalio.com/api/chatbox?appid=9c486e55e38d41e4864e3c6a8041e0f0" type="text/javascript"></script>
+<script runat="server" language="javascript" src="//synalio.com/api/chatbox?appid=9c486e55e38d41e4864e3c6a8041e0f0" type="text/javascript">
 </script>
 <body>
 <p>
