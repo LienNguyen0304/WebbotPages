@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>PYTHON36-SYNALIO</title>
+    <!-- Chat bot script paste below -->
+    <script src="//python36.rebot.jp/api/chatbox?appid=3ab8fbb6cac743b7a6eaf24a3fe78d26&mp=l&p=l" type="text/javascript"></script>
+
+    <!-- For gathering and analysis action data -->
+    <script>var synalytics=function(){!function(e,n,t){(e.NanalyticsObject=t)in e||(e[t]=function(){(e[t].q=e[t].q||[]).push(arguments)},e[t].ep=n);var a=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script"),i=1e17*Math.random();r.type="text/javascript",r.async=!0,r.src="https://sdk."+n+"/v1/web.js?sid="+i,a.parentNode.insertBefore(r,a)}(window,"n-analytics.io","Nanalytics");var e="_rslgvry",n="_rslgvry_conv_cnt",t="r_window",a=/^((?!chrome|android|crios).)*safari/i.test(navigator.userAgent),r="";function i(e){var n=null,t=e+"=",a=document.cookie,r=a.indexOf(t);if(-1!=r){var i=r+t.length,o=a.indexOf(";",i);-1==o&&(o=a.length),n=decodeURIComponent(a.substring(i,o))}return n}function o(){return a?localStorage.getItem(e):i(e)}function c(e,n,t,a,r){var o=n+"="+t+";max-age="+(a||63072e3)+";path=/;";if(r)e.cookie=o;else if(c.domain)e.cookie=o+"domain=."+c.domain;else{var s=location.hostname.split(".");s.length>2&&s.shift(),c.domain=s.join("."),e.cookie=o+"domain=."+c.domain,i(n)!=t&&(c.domain=location.hostname,e.cookie=o+"domain=."+c.domain)}}function s(n){if(a)localStorage.setItem(e,n);else{c(document,e,n,63072e3)}}var u=function(){var e=o();return e||s(e="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,function(e){var n=16*Math.random()|0;return("x"==e?n:3&n|8).toString(16)})),e}();function _(e,n){var t=window.navigator,a=new Date,r=a.getHours()+Math.floor((a.getMinutes()+n)/60);return function(e){var n,t=1;if(e)for(t=0,n=e.length-1;0<=n;n--){var a=e.charCodeAt(n);t=0!=(a=266338304&(t=(t<<6&268435455)+a+(a<<14)))?t^a>>21:t}return t}([e,t.userAgent,t.language||"",a.getTimezoneOffset(),a.getYear(),a.getDate()+Math.floor(r/24),(24+r)%24,(60+a.getMinutes()+n)%60].join("."))}function f(e,n,t,a){e.addEventListener(n,t,!!a)}function d(e){if(e&&"undefined"!==e)return decodeURIComponent(e)}function l(e){if(e&&"undefined"!==e)return/^\d+$/.exec(e)?Number(e):void 0}function m(e){var n=o();if(!n)return e;var a=/(.*)([?&#])(?:_sy=[^&#]*)(?:&?)(.*)/.exec(e);a&&a.length>=3&&(e=a[1]+(a[3]?a[2]+a[3]:""));var r=0,c=i(t);null!=c&&null!=c&&(r="on"===c?1:2);var s,u=n+"."+r;if(window.Nanalytics){var f=(s={},document.cookie.split(/\s*;\s*/).forEach(function(e){var n=e.split("="),t=n[0].trim(),a=n[1];switch(t){case"__na_s_i":s.si=d(a);break;case"__na_s_t":s.sst=l(a);break;case"__na_s_n":s.sn=l(a);break;case"__na_u_i":s.uid=d(a);break;case"__na_c_s":s.src=d(a);break;case"__na_c_m":s.md=d(a);break;case"__na_c_c":s.cp=d(a);break;case"__na_c_k":s.kw=d(a)}}),s);u=u+"."+["uid","si","sst","sn"].map(function(e){return f[e]||""}).join("_")}var m="_sy="+_(u,0)+"."+u,g=e.indexOf("?");a=e.indexOf("#");var x=-1==g?"?":"&";return(e=-1==a?e+(x+m):e.substring(0,a)+x+m+e.substring(a)).replace(/&+_sy=/,"&_sy=")}function g(e){("http:"==e.protocol||"https:"==e.protocol)&&function(e,n){if(n.indexOf(document.location.hostname)>=0||document.location.hostname.indexOf(n)>=0)return!1;e=e.split(",");for(var t=0;t<e.length;t++)if(e[t]instanceof RegExp){if(e[t].test(n))return!0}else{var a=e[t].trim();if(n.indexOf(a)>=0)return!0}return!1}(r,e.hostname||"")&&e.href&&(e.href=m(e.href))}function x(e){try{for(var n=(e=e||window.event).target||e.srcElement,t={},a=100;n&&0<a;){if(n.href&&n.nodeName.match(/^a(?:rea)?$/i)){t=n;break}n=n.parentNode,a--}g(t)}catch(e){console.error(e)}}function v(){var e,n=(e=(e=window.location.search).match(/(?:&|#|\\?)_sy=([^&#]*)/))&&2==e.length?e[1]:"";if(n){var a=n.indexOf("."),r=n.substring(0,a),i=n.substring(a+1);if(r&&i)if(r==_(i,0)||r==_(i,-1)||r==_(i,-2)){a=i.indexOf(".");var o=i.substring(0,a);s(o),u=o;var f=i.substring(a+1);a=f.indexOf(".");var d=f.substring(0,a);"1"!==d&&"2"!==d||c(document,t,"1"===d?"on":"off",1800),function(e){var n=e.split("_");if(4==n.length){var t=(new Date).getTime(),a=location.hostname,r=location.href,i=document;c(i,"__na_u_i",n[0],0,a),c(i,"__na_s_i",n[1],0,a),c(i,"__na_s_t",n[2],0,a),c(i,"__na_s_n",n[3],0,a),c(i,"__na_p_t",t,0,a),c(i,"__na_s_c",encodeURIComponent(r),0,a),Object.defineProperty(document,"referrer",{value:r})}else console.warn("Invalid parameter length:",n.length)}(f.substring(a+1))}}}return function(e){"1"==e&&(f(document,"mousedown",x,!1),f(document,"keyup",x,!1),v())}("0"),Nanalytics("setup","NA-201",(new Date).getTime()),Nanalytics("config","itp_recovery",!0),Nanalytics("send","pageview",{customer_id:u,app_unique_id:"3ab8fbb6cac743b7a6eaf24a3fe78d26",chatbot_talk:((a?localStorage.getItem(n):i(n))||0).toString()}),{getUrl:function(e){var n=document.createElement("a");return n.href=e,g(n),n.href}}}();</script>
+
+    <!-- Covertion Settings -->
+    <script src="https://python36.rebot.jp//analytics/js/3ab8fbb6cac743b7a6eaf24a3fe78d26/" type="text/javascript"></script>
+
+    </head>
+<body>
+    <div id="divtitle"><H1>QA Test site for P36 SYNALIO</H1>
+    <hr>
+    Hello world, This is only for <font color="red">PYTHON36</font>!!! Make sure what environment are you testing
+    <br>
+    </div>
+    <div id="campaign">
+      <!-- Campaign -->
+      <script src="https://python36.rebot.jp//api/campaignjs/3ab8fbb6cac743b7a6eaf24a3fe78d26" type="text/javascript"></script>
+    </div>
+    <div>
+
+戦国時代 (中国)
+出典: フリー百科事典『ウィキペディア（Wikipedia）』
+ナビゲーションに移動検索に移動
+Question book-4.svg
+この記事は検証可能な参考文献や出典が全く示されていないか、不十分です。
+出典を追加して記事の信頼性向上にご協力ください。（2012年8月）
+
+戦国時代の諸国の領土の変遷[1]
+中国の戦国時代（せんごくじだい）は、春秋時代に続く時代で、紀元前403年に晋が韓・魏・趙の3つの国に分かれてから、紀元前221年に秦による中国統一がなされるまでをいう。この名前は『戦国策』から取られている。
+
+どの時点をもって春秋と戦国の境目とするかは、歴史家の間でも意見が分かれている。詳しくは春秋戦国時代の項目を参照。
+
+
+目次
+1	概略
+1.1	初期
+1.2	中期
+1.3	後期
+2	戦国七雄
+3	脚注
+4	関連項目
+概略
+初期
+
+初期の戦国列国
+春秋時代末期、晋の有力家臣であった韓・魏・趙の三家が国政の実権を握って国土を分割し、一方斉でも有力家臣であった田氏が実権を握って簒奪を伺った。だが、晋の三家も斉の田氏も古くから続く両公室にとって代わるには正統性に欠けていた。この為、彼らは既に実質的な権力を喪失していた周王に諸侯として認めて貰う事で正統性を確保しようとした[2]。紀元前403年に晋の三家が諸侯として認められ（三晋の成立）、紀元前386年には斉の田氏が諸侯として認められて斉の公位を簒奪した（田斉の成立）。紀元前376年には三晋諸国が未だに小諸侯として存続していた晋を最終的な滅亡へと追い込んでいる。
+
+戦国時代の初期に覇権を握ったのは、晋から分離したうちの一つの魏である。魏が周王朝より諸侯として正式に認められたときの魏公・文侯は積極的に人材を求め、李克・呉起などを登用して中山国の都を陥落させるなど、魏を最強国とした。息子の武侯の時代にも覇権は続き、さらにその子の恵王の時代には、諸侯の間で初めて王の称号を使うなど、強勢を誇ったが、斉の孫臏の軍略により大敗したことを契機として、凋落の道をたどる。
+
+そもそも魏が強勢となれたのは、魏の支配領域が周代より文化の中心地とされた中原の中央であり、最も開発が進んだ地域であったからであった。それは一方では周辺諸国からの侵攻を受けやすいということでもあり、開発の余地が無いということでもあった。後方に広大な未開発地帯を持つ斉や秦などが台頭してくると、魏は覇権の座から滑り落ちた。
+
+中期
+南の楚は、魏の権力争いに敗れて亡命してきた呉起を迎え入れて政治改革に取り組み領土を広げるが、呉起を擁護した悼王の死後に呉起が反対派によって殺され、改革も頓挫した。東の斉は威王の治世の元で、孫臏の計を用いて魏を大破した。また稷下の学士と呼ばれる学者集団を招聘し、人材を募った。この稷下の代表格として荀子がいる。北の趙は敬侯の下で都を軍事の要衝である晋陽（太原市）から経済の中心地である邯鄲に移した。敬侯の曾孫の武霊王は北方の遊牧民族の騎馬戦術を取り入れた。これは胡服騎射と呼ばれ、これ以後の趙の騎兵隊は諸国に恐れられ、魏に滅ぼされた後に再興した中山国を滅ぼした。秦では孝公の下で商鞅による政治改革が行われ、厳格な法治主義による統治体制により秦の国力は増大し、魏・韓を圧迫し、張儀の策謀により、楚の懐王を捕らえ、その領土を奪った。
+
+その後、一時的に趙・秦・斉の鼎立状態になるが、武霊王が内乱により死去した事で趙が脱落する。秦は趙・韓・魏から領土を奪ったことで更に強大化し、斉も北の燕を一時的に壊滅させ、宋を併合するなどして強大化し、東の斉・西の秦の二強国時代を作る。この時に秦の昭襄王は斉の湣王と共に王の上の称号である帝の称号を使うことに決めたがすぐにとりやめた。
+
+後期
+Streitende-Reiche2.jpg
+この二強国時代は、紀元前284年の楽毅を大将とする燕・趙・韓・魏・楚の5カ国連合軍に斉が大敗し、首都臨淄を陥とされ、莒と即墨以外の全ての邑が占領されたことで終わりを告げる。湣王は、国外へ逃亡した後、莒に戻ったが楚の将軍で斉の宰相になった淖歯に殺され、皮肉なことにかつての燕のように王がいない状態となった。のちに田単により復興はするものの、国力を大幅に消耗した。
+
+斉の凋落により、中国は秦による一強国時代となる。秦は、名将・白起を使って諸国に苛烈な攻撃を加え、紀元前260年には長平の戦いで趙に大勝し、45万と言う将兵を一度に殺した。また紀元前256年に東周を滅ぼす。
+
+この中で紀元前247年に政が秦王に即位する。のちの始皇帝である。政は、李斯の政策の下で法治主義・権力集中をさらに進め、外征面では王翦・王賁親子や李信などを起用した。まず紀元前230年に韓を滅ぼし、続いて紀元前228年に趙、紀元前225年に魏、紀元前223年に楚、紀元前222年に燕、そして紀元前221年に斉を滅ぼし、天下を統一。ここに戦国時代は終結し、中国史上初めての統一王朝が誕生した。
+
+秦による統一が実現できた背景として、「晋の分裂による大国の消滅」「商鞅の国内改革と西河の制圧、司馬錯の蜀征服による秦の国力強化」がもたらした勢力均衡の崩壊があったとされる。これに対して秦以外の六国は合従して攻め寄せる事もあったものの、秦と国境を接していなかった斉や燕には秦を滅ぼすメリットが無いため、迎撃に対する合従は成立しても追撃に対する合従は成立させられなかった。秦に他の六国が対抗できなかった理由として地勢的に秦が守りやすかった説がよくあげられるものの、実際には他の六国の国内改革の遅れや利害関係の対立による影響の方が大きかったと考えられている[3]。
+
+戦国七雄
+
+紀元前260年の戦国七雄
+春秋時代には国の祭祀を絶つと国の祖先から呪われるという考えから、国を占領しても完全に滅ぼしてしまうことはそれほど多くなく、また滅びても復興することがよくあった。戦国時代に入ると容赦がなくなり、戦争に負けることは国の滅亡に直接繋がった。そのような弱肉強食の世界で次第に7つの大国へ収斂されていった。その7つの国を戦国七雄と呼ぶ。春秋時代には名目的には周王の権威も残っていたが、戦国時代になると七雄の君主がそれぞれ｢王」を称するようになり（ただし、楚の君主は以前から王であった）、周王の権威は失われた。
+
+韓（紀元前403年 - 紀元前230年）
+趙（紀元前403年 - 紀元前228年）
+魏（紀元前403年 - 紀元前225年）
+楚（? - 紀元前223年）
+燕（紀元前1100年頃 - 紀元前222年）
+斉（紀元前386年 - 紀元前221年）
+秦（? - 紀元前206年）
+七雄以外の宋や中山といった国々も王号を唱えており、諸国における重要度も高かったという指摘もされている。
+  </div>
+
+
+<div>
+脚注
+[ヘルプ]
+^ ”MDBG”, Sökord: 战国策
+^ 吉田亮太『春秋戦国政治外交史』三恵社、2014年、P66-71。なお、吉田はこの他に正統性を確保する方法として覇権国（覇者）の承認を得る事も考えられたが、中原には（本来であれば晋か斉が該当する筈であった）覇権国が存在しないのと同じ状態であったため、この選択は取りえなかったとする。
+^ 吉田亮太『春秋戦国政治外交史』三恵社、2014年 ISBN 978-4-86487-176-1 P112-117・121-124
+関連項目
+	ウィキメディア・コモンズには、戦国時代 (中国)に関連するメディアおよびカテゴリがあります。
+諸子百家
+戦国四君
+[隠す]
+表話編歴
+春秋戦国時代（春秋時代・戦国時代）
+国
+春秋十二列侯
+魯斉(姜斉)晋秦楚宋衛鄭陳蔡曹燕呉
+戦国七雄
+秦楚斉(田斉)燕趙魏韓
+他
+越中山杞曾邾滕唐栄単沈頼英六庸邢莱古蜀西周公東周公
+諸子百家
+諸子
+孔子老子荘子墨子孟子荀子韓非子孫子列子楊朱
+百家
+陰陽家儒家墨家法家名家道家縦横家雑家農家小説家兵家
+関連項目
+史記春秋左氏伝戦国策春秋五覇戦国四君
+カテゴリ: 春秋戦国
+案内メニュー
+ログインしていませんトーク投稿記録アカウント作成ログインページノート閲覧編集履歴表示検索
+Wikipedia内を検索
+メインページ
+コミュニティ・ポータル
+最近の出来事
+新しいページ
+最近の更新
+おまかせ表示
+練習用ページ
+アップロード (ウィキメディア・コモンズ)
+ヘルプ
+ヘルプ
+井戸端
+お知らせ
+バグの報告
+寄付
+ウィキペディアに関するお問い合わせ
+ツール
+リンク元
+関連ページの更新状況
+ファイルをアップロード
+特別ページ
+この版への固定リンク
+ページ情報
+ウィキデータ項目
+このページを引用
+他のプロジェクト
+コモンズ
+印刷/書き出し
+ブックの新規作成
+PDF 形式でダウンロード
+印刷用バージョン
+
+他言語版
+العربية
+English
+Español
+Français
+हिन्दी
+한국어
+Русский
+اردو
+中文
+他 48
+リンクを編集
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="showup">
+<b>
+  最終更新 2019年12月28日 (土) 00:17 （日時は個人設定で未設定ならばUTC）。
+</b>
+テキストはクリエイティブ・コモンズ 表示-継承ライセンスの下で利用可能です。追加の条件が適用される場合があります。詳細は利用規約を参照してください。
+プライバシー・ポリシーウィキペディアについて免責事項開発者統計Cookieに関する声明モバイルビューWikimedia FoundationPowered by MediaWiki
+<br>
+<br>
+<br>
+<p>
+<input type="button" value="送信します" title="送信">送信のボタン</input>
+</p>
+    </div>
+</body>
+</html>
