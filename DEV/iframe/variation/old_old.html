@@ -8,8 +8,19 @@
     -->
     <title>[Dev]QA Test Site for REBOT on Dev</title>
     <!-- Chat bot設置スクリプト (REBOT/OLD) -->
-    <script src="//dev.rebot.resola.net/api/chatbox?appid=40d7d64e0fa14cbd977c57f4d5031322" type="text/javascript"></script>
-
+    <!-- <script src="//dev.rebot.resola.net/api/chatbox?appid=40d7d64e0fa14cbd977c57f4d5031322" type="text/javascript"></script> -->
+    <script>
+      function loadRebot() {
+        var loaderScript = document.createElement('script');
+        loaderScript.setAttribute('src', 'https://dev.rebot.resola.net/api/chatbox?appid=40d7d64e0fa14cbd977c57f4d5031322');
+        (document.head || document.body || document.documentElement).appendChild(loaderScript);
+      }
+      if (document.readyState == 'complete') {
+        loadRebot();
+      } else {
+        self.addEventListener('load', loadRebot);
+      }
+    </script>
     <!-- 行動データ取得用スクリプト -->
 
 
