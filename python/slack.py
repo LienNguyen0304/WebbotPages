@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import requests, json, time
 
 WEB_HOOK_URL = "https://hooks.slack.com/services/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"
