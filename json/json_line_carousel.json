@@ -1,14 +1,14 @@
 {
   "type": "template",
-  "altText": "this is a carousel template",
+  "altText": "カルーセル動的設定",
   "template": {
       "type": "carousel",
       "columns": [
           {
             "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
             "imageBackgroundColor": "#FFFFFF",
-            "title": "this is menu",
-            "text": "description",
+            "title": "あいうえお",
+            "text": "テスト１",
             "defaultAction": {
                 "type": "uri",
                 "label": "View detail",
@@ -35,8 +35,8 @@
           {
             "thumbnailImageUrl": "https://example.com/bot/images/item2.jpg",
             "imageBackgroundColor": "#000000",
-            "title": "this is menu",
-            "text": "description",
+            "title": "さしすせそ",
+            "text": "テスト２",
             "defaultAction": {
                 "type": "uri",
                 "label": "View detail",
