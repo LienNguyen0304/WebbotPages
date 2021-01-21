@@ -50,8 +50,11 @@
       }
 
     })();
-    window.addEventListener("load", satori.onLoad, true);
-    </script>
+    if (window.synalio) {
+      satori.onLoad();
+    } else {
+      window.addEventListener("load", satori.onLoad, true);
+    }
 
     </head>
 <body>
