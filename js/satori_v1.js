@@ -1,5 +1,3 @@
-// Satori js updated at 2021/01/21 //
-
 var satori = (function (){
   function getCookie(name) {
     var result = null;
@@ -34,8 +32,4 @@ var satori = (function (){
   }
 
 })();
-if (window.synalio) {
-  satori.onLoad();
-} else {
-  window.addEventListener("load", satori.onLoad, true);
-}
+window.addEventListener("load", satori.onLoad, true);
