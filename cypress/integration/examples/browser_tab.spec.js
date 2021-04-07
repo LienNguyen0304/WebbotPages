@@ -1,8 +1,26 @@
-context('タブ切り替え',() =>{
-  it('キー操作で切り替え',() => {
-    cy.visit('https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/campaign.html')
-    //cy.get('#synalio-campaign',{timeout: 10000}).should('be.visible')
-    cy.get('iframe#synalio-iframe').should('exist')
-    cy.get('iframe#synalio-iframe').contains('会話を始める').should('exist')
+describe('tab_switch',function(){
+  const getIframeBody = () => {
+    return cy
+      .get('iframe')
+      .its('0.contentDocument.body').should('not.be.empty')
+      .then(cy.wrap)
+  }
+  before( function() {
+    cy.visit('https://eugenechangresola.github.io/WebbotPages/STG/PEP/')
+  })
+  after( function(){
+    cy.screenshot()
+  })
+  it('click link button and switch tab', function() {
+    //cy.visit('https://pep.stg.resola.net/user/login')
+
+    //cy.get('input[name=username]').type('y.chou+stg_pep_owner@resola.ai')
+    //cy.get('input[name=password]').type('Qa12345678')
+    //cy.get('input').contains('ログイン').click()
+
+    //getIframeBody().find('[name="window-box"]').should('exist')
+    getIframeBody().find('.inner-box-btn-box').click()
+    getIframeBody().contains('対話ノード with feedback').click()
+    getIframeBody().contains('Mail here').should('exist')
   })
 })
