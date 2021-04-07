@@ -1,1 +1,9 @@
-{}
+{
+  "reporter": "C:\\Users\\Eugene\\node_modules\\mochawesome",
+  "reporterOptions":{
+    "reportDir": "cypress/reports",
+    "overwrite": false,
+    "html": true,
+    "json": true
+  }
+}

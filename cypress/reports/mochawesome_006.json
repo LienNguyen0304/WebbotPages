@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-04-07T05:00:01.435Z",
+    "end": "2021-04-07T05:00:09.072Z",
+    "duration": 7637,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d77d9da1-0636-4fbb-96a9-e1ec47a5c152",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\Eugene.spec.js",
+      "file": "cypress\\integration\\examples\\Eugene.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0ff4aea4-28a0-4ffe-9480-fffc7f7e584d",
+          "title": "テストケース",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "自分テスト用",
+              "fullTitle": "テストケース 自分テスト用",
+              "timedOut": null,
+              "duration": 501,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  \"../screenshots/examples/Eugene.spec.js/テストケース -- 自分テスト用 (failed).png\",\n  \"../videos/examples/Eugene.spec.js.mp4\"\n]",
+              "code": "//cy.visit('https://pep.stg.resola.net/user/login')\n//cy.get('input[name=username]').type('y.chou+stg_pep_owner@resola.ai')\n//cy.get('input[name=password]').type('Qa12345678')\n//cy.get('input').contains('ログイン').click()\n//getIframeBody().find('[name=\"window-box\"]').should('exist')\ngetIframeBody().find('.inner-box-btn-box').click();\ngetIframeBody().contains('対話ノード with feedback').click();\ngetIframeBody().contains('Mail here').should('exist');",
+              "err": {
+                "message": "TypeError: cy.screenshots is not a function\n\nBecause this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `テストケース`",
+                "estack": "TypeError: cy.screenshots is not a function\n\nBecause this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `テストケース`\n    at Context.eval (https://eugenechangresola.github.io/__cypress/tests?p=cypress\\integration\\examples\\Eugene.spec.js:108:8)",
+                "diff": null
+              },
+              "uuid": "f12f3612-64bd-4967-b95a-554fde9f9820",
+              "parentUUID": "0ff4aea4-28a0-4ffe-9480-fffc7f7e584d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f12f3612-64bd-4967-b95a-554fde9f9820"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 501,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
