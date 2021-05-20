@@ -20,7 +20,7 @@ gc = gspread.authorize(credentials)
 SPREADSHEET_KEY = '13IhRwmb3SXMAf0XF1XOO3COxpltfsCBYqnQX1LoFbVI'
 
 #共有設定したスプレッドシートのシート1を開く
-worksheet = gc.open_by_key(SPREADSHEET_KEY).worksheet('URL')
+worksheet = gc.open_by_key(SPREADSHEET_KEY).worksheet('Permission_URL')
 
 #A1セルの値を受け取る
 #import_value = int(worksheet.acell('A1').value)
@@ -44,9 +44,11 @@ worksheet = gc.open_by_key(SPREADSHEET_KEY).worksheet('URL')
 cell = worksheet.find('URL')
 print(cell.row,cell.col)
 cell_data = worksheet.col_values(cell.col)
+i = 1
 for formdata in cell_data:
     if formdata == "URL":
         continue
-    print(formdata)
-    webbrowser.open(formdata)
-    time.sleep(15)
+    print(i, formdata, sep='--')
+    i = i + 1
+    # webbrowser.open(formdata)
+    # time.sleep(15)
