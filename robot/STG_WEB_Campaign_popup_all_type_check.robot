@@ -1,6 +1,11 @@
 *** Settings ***
 Library    SeleniumLibrary
 
+# Test environment
+# Env : stg
+# cid : 149 (Scenario v2)
+# app : QA (Web)
+
 *** Test Cases ***
 Campaign popup widget type 1
     Open Browser    https://eugenechangresola.github.io/WebbotPages/STG/SYNALIO/149/?campaign=1    chrome
