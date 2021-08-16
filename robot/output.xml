@@ -1,452 +1,417 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0.3 (Python 3.9.6 on win32)" generated="20210816 16:35:07.363" rpa="false" schemaversion="2">
-<suite id="s1" name="Chatbot behavior" source="C:\Users\Eugene\Documents\GitHub\EugeneChangResola.github.io\WebbotPages\robot\Chatbot_behavior.robot">
-<test id="s1-t1" name="Chat bot behavior check - SYNALIO Scenario v1 with Multiple chat window : SCENARIO FLOW">
+<robot generator="Robot 4.0.3 (Python 3.9.6 on win32)" generated="20210816 16:44:53.997" rpa="false" schemaversion="2">
+<suite id="s1" name="PROD Web Chatbot behavior" source="C:\Users\Eugene\Documents\GitHub\EugeneChangResola.github.io\WebbotPages\robot\PROD_Web_Chatbot_behavior.robot">
+<test id="s1-t1" name="Chat bot behavior check - SYNALIO Scenario v2 with Multiple chat window : SCENARIO FLOW">
 <kw name="Open Browser" library="Selenium2Library">
-<arg>https://eugenechangresola.github.io/WebbotPages/STG/AUTO/MessageType/</arg>
+<arg>https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/AUTO/</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210816 16:35:07.564" level="INFO">Opening browser 'Chrome' to base url 'https://eugenechangresola.github.io/WebbotPages/STG/AUTO/MessageType/'.</msg>
-<status status="PASS" starttime="20210816 16:35:07.564" endtime="20210816 16:35:09.619"/>
+<msg timestamp="20210816 16:44:54.268" level="INFO">Opening browser 'Chrome' to base url 'https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/AUTO/'.</msg>
+<status status="PASS" starttime="20210816 16:44:54.267" endtime="20210816 16:44:56.103"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>id=divtitle</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210816 16:35:09.620" endtime="20210816 16:35:09.655"/>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210816 16:45:01.267" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-41.png"&gt;&lt;img src="selenium-screenshot-41.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210816 16:45:01.127" endtime="20210816 16:45:01.267"/>
+</kw>
+<msg timestamp="20210816 16:45:01.270" level="FAIL">Element 'id=divtitle' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20210816 16:44:56.103" endtime="20210816 16:45:01.270"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <arg>id=synalio-iframe</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20210816 16:35:09.656" endtime="20210816 16:35:09.670"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.270" endtime="20210816 16:45:01.270"/>
 </kw>
 <kw name="Select Frame" library="Selenium2Library">
 <arg>id=synalio-iframe</arg>
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20210816 16:35:09.670" level="INFO">Selecting frame 'id=synalio-iframe'.</msg>
-<status status="PASS" starttime="20210816 16:35:09.670" endtime="20210816 16:35:09.704"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.271" endtime="20210816 16:45:01.271"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>css=body &gt; div.window-box</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210816 16:35:09.704" endtime="20210816 16:35:10.890"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.272" endtime="20210816 16:45:01.272"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210816 16:35:12.901" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20210816 16:35:10.890" endtime="20210816 16:35:12.902"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.273" endtime="20210816 16:45:01.273"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>css=body &gt; div &gt; div &gt; div.header-box</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 16:35:12.903" level="INFO">Clicking element 'css=body &gt; div &gt; div &gt; div.header-box'.</msg>
-<status status="PASS" starttime="20210816 16:35:12.902" endtime="20210816 16:35:13.023"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.273" endtime="20210816 16:45:01.274"/>
 </kw>
 <kw name="Wait Until Element Contains" library="Selenium2Library">
 <arg>css=#synalio-chat-message &gt; div &gt; div.chat-block</arg>
 <arg>Simpleシンプル</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" starttime="20210816 16:35:13.024" endtime="20210816 16:35:15.685"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.274" endtime="20210816 16:45:01.274"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Scenario - "Simple" type message : PASSED</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210816 16:35:15.687" level="INFO">Scenario - "Simple" type message : PASSED</msg>
-<status status="PASS" starttime="20210816 16:35:15.685" endtime="20210816 16:35:15.687"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.275" endtime="20210816 16:45:01.276"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>xpath=//*[@id="synalio-chat-message"]/div/div[3]/span[contains(text(),'テキスト')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 16:35:15.688" level="INFO">Clicking element 'xpath=//*[@id="synalio-chat-message"]/div/div[3]/span[contains(text(),'テキスト')]'.</msg>
-<status status="PASS" starttime="20210816 16:35:15.688" endtime="20210816 16:35:15.780"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.277" endtime="20210816 16:45:01.277"/>
 </kw>
 <kw name="Wait Until Element Contains" library="Selenium2Library">
 <arg>css=#synalio-chat-message &gt; div:nth-child(3) &gt; div.chat-block</arg>
 <arg>Textテキスト</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" starttime="20210816 16:35:15.780" endtime="20210816 16:35:18.676"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.278" endtime="20210816 16:45:01.278"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Scenario - "Text" type message : PASSED</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210816 16:35:18.677" level="INFO">Scenario - "Text" type message : PASSED</msg>
-<status status="PASS" starttime="20210816 16:35:18.676" endtime="20210816 16:35:18.677"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.279" endtime="20210816 16:45:01.279"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>xpath=//*[@id="synalio-chat-message"]/div[3]/div[3]/span[contains(text(),'Formフォーム')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 16:35:18.678" level="INFO">Clicking element 'xpath=//*[@id="synalio-chat-message"]/div[3]/div[3]/span[contains(text(),'Formフォーム')]'.</msg>
-<status status="PASS" starttime="20210816 16:35:18.678" endtime="20210816 16:35:18.794"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.280" endtime="20210816 16:45:01.280"/>
 </kw>
 <kw name="Wait Until Element Contains" library="Selenium2Library">
 <arg>css=#input &gt; div.chat-form-group.row.form-element &gt; div &gt; label</arg>
 <arg>Formフォーム:</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" starttime="20210816 16:35:18.794" endtime="20210816 16:35:21.700"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.281" endtime="20210816 16:45:01.281"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Scenario - "Form" type message : PASSED</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210816 16:35:21.701" level="INFO">Scenario - "Form" type message : PASSED</msg>
-<status status="PASS" starttime="20210816 16:35:21.701" endtime="20210816 16:35:21.701"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.282" endtime="20210816 16:45:01.282"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>xpath=//*[@id="synalio-chat-message"]/div[5]/div[3]/span[contains(text(),'Scriptスクリプト')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 16:35:21.703" level="INFO">Clicking element 'xpath=//*[@id="synalio-chat-message"]/div[5]/div[3]/span[contains(text(),'Scriptスクリプト')]'.</msg>
-<status status="PASS" starttime="20210816 16:35:21.702" endtime="20210816 16:35:21.796"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.282" endtime="20210816 16:45:01.282"/>
 </kw>
 <kw name="Handle Alert" library="Selenium2Library">
 <doc>Handles the current alert and returns its message.</doc>
-<msg timestamp="20210816 16:35:21.797" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
-<status status="PASS" starttime="20210816 16:35:21.797" endtime="20210816 16:35:22.330"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.283" endtime="20210816 16:45:01.283"/>
 </kw>
 <kw name="Wait Until Element Contains" library="Selenium2Library">
 <arg>css=#synalio-chat-message &gt; div:nth-child(6) &gt; div.chat-block</arg>
 <arg>Scriptスクリプト</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" starttime="20210816 16:35:22.332" endtime="20210816 16:35:24.758"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.284" endtime="20210816 16:45:01.285"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Scenariop - "Script" type message : PASSED</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210816 16:35:24.759" level="INFO">Scenariop - "Script" type message : PASSED</msg>
-<status status="PASS" starttime="20210816 16:35:24.759" endtime="20210816 16:35:24.759"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.285" endtime="20210816 16:45:01.285"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>xpath=//*[@id="synalio-chat-message"]/div[6]/div[3]/span[contains(text(),'Carouselカルーセル')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 16:35:24.760" level="INFO">Clicking element 'xpath=//*[@id="synalio-chat-message"]/div[6]/div[3]/span[contains(text(),'Carouselカルーセル')]'.</msg>
-<status status="PASS" starttime="20210816 16:35:24.760" endtime="20210816 16:35:24.851"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.286" endtime="20210816 16:45:01.286"/>
 </kw>
 <kw name="Wait Until Element Contains" library="Selenium2Library">
 <arg>css=#swiper-container-1 &gt; li &gt; div.inner-body-box &gt; div.text-block &gt; p.main-text</arg>
 <arg>Carouselカルーセル</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" starttime="20210816 16:35:24.852" endtime="20210816 16:35:25.537"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.287" endtime="20210816 16:45:01.287"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Scenario - "Carousel" type message : PASSED</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210816 16:35:25.538" level="INFO">Scenario - "Carousel" type message : PASSED</msg>
-<status status="PASS" starttime="20210816 16:35:25.538" endtime="20210816 16:35:25.538"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.288" endtime="20210816 16:45:01.288"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>xpath=//*[@id="swiper-container-1"]/li/div[2]/div[2]/div[1]/span[contains(text(),'ホーム')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 16:35:25.538" level="INFO">Clicking element 'xpath=//*[@id="swiper-container-1"]/li/div[2]/div[2]/div[1]/span[contains(text(),'ホーム')]'.</msg>
-<status status="PASS" starttime="20210816 16:35:25.538" endtime="20210816 16:35:25.628"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.289" endtime="20210816 16:45:01.289"/>
 </kw>
 <kw name="Wait Until Element Contains" library="Selenium2Library">
 <arg>css=#synalio-chat-message &gt; div:nth-child(10) &gt; div.chat-block</arg>
 <arg>Simpleシンプル</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" starttime="20210816 16:35:25.628" endtime="20210816 16:35:28.299"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.290" endtime="20210816 16:45:01.290"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>css=#btn-open-close</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 16:35:28.300" level="INFO">Clicking element 'css=#btn-open-close'.</msg>
-<status status="PASS" starttime="20210816 16:35:28.300" endtime="20210816 16:35:28.398"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.290" endtime="20210816 16:45:01.291"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>css=#btn-open-close</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210816 16:35:28.400" endtime="20210816 16:35:28.432"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.292" endtime="20210816 16:45:01.292"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210816 16:35:30.435" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20210816 16:35:28.432" endtime="20210816 16:35:30.435"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.292" endtime="20210816 16:45:01.292"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>css=body &gt; div &gt; div.outer-box &gt; div.header-box &gt; div.inner-header-set-box &gt; div.btn-set-box</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 16:35:30.436" level="INFO">Clicking element 'css=body &gt; div &gt; div.outer-box &gt; div.header-box &gt; div.inner-header-set-box &gt; div.btn-set-box'.</msg>
-<status status="PASS" starttime="20210816 16:35:30.436" endtime="20210816 16:35:30.521"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.293" endtime="20210816 16:45:01.293"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210816 16:35:32.528" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20210816 16:35:30.521" endtime="20210816 16:35:32.528"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.294" endtime="20210816 16:45:01.294"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>css=div.btn-home</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210816 16:35:32.529" endtime="20210816 16:35:32.558"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.295" endtime="20210816 16:45:01.295"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Chat box - "Minimize and reopen" behavior : PASSED</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210816 16:35:32.559" level="INFO">Chat box - "Minimize and reopen" behavior : PASSED</msg>
-<status status="PASS" starttime="20210816 16:35:32.559" endtime="20210816 16:35:32.559"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.295" endtime="20210816 16:45:01.295"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>id=home-link</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 16:35:32.560" level="INFO">Clicking element 'id=home-link'.</msg>
-<status status="PASS" starttime="20210816 16:35:32.560" endtime="20210816 16:35:32.650"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.296" endtime="20210816 16:45:01.296"/>
 </kw>
 <kw name="Wait Until Element Contains" library="Selenium2Library">
 <arg>css=#synalio-chat-message &gt; div:nth-child(11) &gt; div.chat-block</arg>
 <arg>Simpleシンプル</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" starttime="20210816 16:35:32.651" endtime="20210816 16:35:35.538"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.296" endtime="20210816 16:45:01.296"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Chat box - "Home button" behavior : PASSED</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210816 16:35:35.540" level="INFO">Chat box - "Home button" behavior : PASSED</msg>
-<status status="PASS" starttime="20210816 16:35:35.540" endtime="20210816 16:35:35.540"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.297" endtime="20210816 16:45:01.297"/>
 </kw>
 <kw name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210816 16:35:35.540" endtime="20210816 16:35:37.660"/>
+<status status="NOT RUN" starttime="20210816 16:45:01.298" endtime="20210816 16:45:01.298"/>
 </kw>
-<status status="PASS" starttime="20210816 16:35:07.563" endtime="20210816 16:35:37.663"/>
+<status status="FAIL" starttime="20210816 16:44:54.267" endtime="20210816 16:45:01.298">Element 'id=divtitle' not visible after 5 seconds.</status>
 </test>
-<test id="s1-t2" name="Chat bot behavior check - SYNALIO Scenario v1 with Multiple chat window : ACTION">
+<test id="s1-t2" name="Chat bot behavior check - SYNALIO Scenario v2 with Multiple chat window : ACTION">
 <kw name="Open Browser" library="Selenium2Library">
-<arg>https://eugenechangresola.github.io/WebbotPages/STG/AUTO/MessageType/action.html</arg>
+<arg>https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/AUTO/action.html</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210816 16:35:37.679" level="INFO">Opening browser 'Chrome' to base url 'https://eugenechangresola.github.io/WebbotPages/STG/AUTO/MessageType/action.html'.</msg>
-<status status="PASS" starttime="20210816 16:35:37.677" endtime="20210816 16:35:39.950"/>
+<msg timestamp="20210816 16:45:01.305" level="INFO">Opening browser 'Chrome' to base url 'https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/AUTO/action.html'.</msg>
+<status status="PASS" starttime="20210816 16:45:01.305" endtime="20210816 16:45:03.030"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>id=divtitle</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210816 16:35:39.951" endtime="20210816 16:35:39.982"/>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210816 16:45:08.209" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-42.png"&gt;&lt;img src="selenium-screenshot-42.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210816 16:45:08.056" endtime="20210816 16:45:08.209"/>
+</kw>
+<msg timestamp="20210816 16:45:08.210" level="FAIL">Element 'id=divtitle' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20210816 16:45:03.030" endtime="20210816 16:45:08.210"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <arg>id=synalio-iframe</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20210816 16:35:39.983" endtime="20210816 16:35:39.996"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.211" endtime="20210816 16:45:08.211"/>
 </kw>
 <kw name="Select Frame" library="Selenium2Library">
 <arg>id=synalio-iframe</arg>
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20210816 16:35:39.998" level="INFO">Selecting frame 'id=synalio-iframe'.</msg>
-<status status="PASS" starttime="20210816 16:35:39.997" endtime="20210816 16:35:40.029"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.212" endtime="20210816 16:45:08.212"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>css=body &gt; div.window-box</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210816 16:35:40.029" endtime="20210816 16:35:41.160"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.212" endtime="20210816 16:45:08.212"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210816 16:35:43.161" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20210816 16:35:41.161" endtime="20210816 16:35:43.161"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.213" endtime="20210816 16:45:08.213"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>css=body &gt; div &gt; div &gt; div.header-box</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 16:35:43.162" level="INFO">Clicking element 'css=body &gt; div &gt; div &gt; div.header-box'.</msg>
-<status status="PASS" starttime="20210816 16:35:43.162" endtime="20210816 16:35:43.271"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.213" endtime="20210816 16:45:08.213"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>id=synalio-chat-text-input</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210816 16:35:43.271" endtime="20210816 16:35:43.738"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.214" endtime="20210816 16:45:08.214"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>css=div.chat-block</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210816 16:35:43.739" endtime="20210816 16:35:45.743"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.215" endtime="20210816 16:45:08.215"/>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <arg>id=synalio-chat-text-input</arg>
 <arg>text message</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210816 16:35:45.745" level="INFO">Typing text 'text message' into text field 'id=synalio-chat-text-input'.</msg>
-<status status="PASS" starttime="20210816 16:35:45.744" endtime="20210816 16:35:45.857"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.216" endtime="20210816 16:45:08.216"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>css=.send-text-btn</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 16:35:45.858" level="INFO">Clicking element 'css=.send-text-btn'.</msg>
-<status status="PASS" starttime="20210816 16:35:45.857" endtime="20210816 16:35:45.946"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.217" endtime="20210816 16:45:08.217"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210816 16:35:48.956" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20210816 16:35:45.946" endtime="20210816 16:35:48.956"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.217" endtime="20210816 16:45:08.217"/>
 </kw>
 <kw name="Element Should Contain" library="Selenium2Library">
 <arg>xpath=//*[@id="synalio-chat-message"]/div[3]/div[2]</arg>
 <arg>[アクション]テキストメッセージ</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20210816 16:35:48.987" level="INFO">Element 'xpath=//*[@id="synalio-chat-message"]/div[3]/div[2]' contains text '[アクション]テキストメッセージ'.</msg>
-<status status="PASS" starttime="20210816 16:35:48.957" endtime="20210816 16:35:48.987"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.217" endtime="20210816 16:45:08.218"/>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <arg>id=synalio-chat-text-input</arg>
 <arg>Submit Form</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210816 16:35:48.989" level="INFO">Typing text 'Submit Form' into text field 'id=synalio-chat-text-input'.</msg>
-<status status="PASS" starttime="20210816 16:35:48.988" endtime="20210816 16:35:49.045"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.218" endtime="20210816 16:45:08.218"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>css=.send-text-btn</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 16:35:49.046" level="INFO">Clicking element 'css=.send-text-btn'.</msg>
-<status status="PASS" starttime="20210816 16:35:49.045" endtime="20210816 16:35:49.095"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.219" endtime="20210816 16:45:08.219"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>css=#input &gt; div.chat-form-group.row.form-element &gt; div &gt; label</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210816 16:35:49.096" endtime="20210816 16:35:51.835"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.220" endtime="20210816 16:45:08.220"/>
 </kw>
 <kw name="Element Should Contain" library="Selenium2Library">
 <arg>css=#input &gt; div.chat-form-group.row.form-element &gt; div &gt; label</arg>
 <arg>Action form:</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20210816 16:35:51.858" level="INFO">Element 'css=#input &gt; div.chat-form-group.row.form-element &gt; div &gt; label' contains text 'Action form:'.</msg>
-<status status="PASS" starttime="20210816 16:35:51.835" endtime="20210816 16:35:51.858"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.221" endtime="20210816 16:45:08.221"/>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <arg>id=synalio-chat-text-input</arg>
 <arg>Script</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210816 16:35:51.860" level="INFO">Typing text 'Script' into text field 'id=synalio-chat-text-input'.</msg>
-<status status="PASS" starttime="20210816 16:35:51.859" endtime="20210816 16:35:51.911"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.223" endtime="20210816 16:45:08.223"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>css=.send-text-btn</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 16:35:51.912" level="INFO">Clicking element 'css=.send-text-btn'.</msg>
-<status status="PASS" starttime="20210816 16:35:51.911" endtime="20210816 16:35:51.960"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.224" endtime="20210816 16:45:08.225"/>
 </kw>
 <kw name="Handle Alert" library="Selenium2Library">
 <doc>Handles the current alert and returns its message.</doc>
-<msg timestamp="20210816 16:35:51.961" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
-<status status="PASS" starttime="20210816 16:35:51.961" endtime="20210816 16:35:52.478"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.226" endtime="20210816 16:45:08.226"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210816 16:35:55.480" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20210816 16:35:52.479" endtime="20210816 16:35:55.480"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.227" endtime="20210816 16:45:08.227"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>css=div.chat-block</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210816 16:35:55.483" endtime="20210816 16:35:55.528"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.227" endtime="20210816 16:45:08.227"/>
 </kw>
 <kw name="Element Should Contain" library="Selenium2Library">
 <arg>xpath=//*[@id="synalio-chat-message"]/div[6]/div[2]</arg>
 <arg>action script</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20210816 16:35:55.555" level="INFO">Element 'xpath=//*[@id="synalio-chat-message"]/div[6]/div[2]' contains text 'action script'.</msg>
-<status status="PASS" starttime="20210816 16:35:55.528" endtime="20210816 16:35:55.555"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.228" endtime="20210816 16:45:08.228"/>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <arg>id=synalio-chat-text-input</arg>
 <arg>carousel</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210816 16:35:55.556" level="INFO">Typing text 'carousel' into text field 'id=synalio-chat-text-input'.</msg>
-<status status="PASS" starttime="20210816 16:35:55.556" endtime="20210816 16:35:55.610"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.229" endtime="20210816 16:45:08.229"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>css=.send-text-btn</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 16:35:55.611" level="INFO">Clicking element 'css=.send-text-btn'.</msg>
-<status status="PASS" starttime="20210816 16:35:55.611" endtime="20210816 16:35:55.659"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.230" endtime="20210816 16:45:08.230"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210816 16:35:58.662" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20210816 16:35:55.661" endtime="20210816 16:35:58.662"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.232" endtime="20210816 16:45:08.232"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>css=#swiper-container-1 &gt; li &gt; div.header-block</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210816 16:35:58.663" endtime="20210816 16:35:58.695"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.233" endtime="20210816 16:45:08.233"/>
 </kw>
 <kw name="Element Should Contain" library="Selenium2Library">
 <arg>css=#swiper-container-1 &gt; li &gt; div.inner-body-box &gt; div.text-block &gt; p.main-text</arg>
 <arg>action carousel</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20210816 16:35:58.726" level="INFO">Element 'css=#swiper-container-1 &gt; li &gt; div.inner-body-box &gt; div.text-block &gt; p.main-text' contains text 'action carousel'.</msg>
-<status status="PASS" starttime="20210816 16:35:58.696" endtime="20210816 16:35:58.726"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.234" endtime="20210816 16:45:08.234"/>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <arg>id=synalio-chat-text-input</arg>
 <arg>sys error</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210816 16:35:58.727" level="INFO">Typing text 'sys error' into text field 'id=synalio-chat-text-input'.</msg>
-<status status="PASS" starttime="20210816 16:35:58.727" endtime="20210816 16:35:58.793"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.235" endtime="20210816 16:45:08.235"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>css=.send-text-btn</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 16:35:58.794" level="INFO">Clicking element 'css=.send-text-btn'.</msg>
-<status status="PASS" starttime="20210816 16:35:58.794" endtime="20210816 16:35:58.842"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.235" endtime="20210816 16:45:08.236"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210816 16:36:01.855" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20210816 16:35:58.842" endtime="20210816 16:36:01.855"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.237" endtime="20210816 16:45:08.237"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>css=div.chat-block</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210816 16:36:01.856" endtime="20210816 16:36:01.873"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.237" endtime="20210816 16:45:08.237"/>
 </kw>
 <kw name="Element Should Contain" library="Selenium2Library">
 <arg>xpath=//*[@id="synalio-chat-message"]/div[10]/div[3]/span</arg>
 <arg>メニューに戻る</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20210816 16:36:01.899" level="INFO">Element 'xpath=//*[@id="synalio-chat-message"]/div[10]/div[3]/span' contains text 'メニューに戻る'.</msg>
-<status status="PASS" starttime="20210816 16:36:01.874" endtime="20210816 16:36:01.899"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.238" endtime="20210816 16:45:08.238"/>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <arg>id=synalio-chat-text-input</arg>
 <arg>メニュー</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210816 16:36:01.901" level="INFO">Typing text 'メニュー' into text field 'id=synalio-chat-text-input'.</msg>
-<status status="PASS" starttime="20210816 16:36:01.901" endtime="20210816 16:36:01.949"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.240" endtime="20210816 16:45:08.240"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>css=.send-text-btn</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210816 16:36:01.950" level="INFO">Clicking element 'css=.send-text-btn'.</msg>
-<status status="PASS" starttime="20210816 16:36:01.950" endtime="20210816 16:36:01.997"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.241" endtime="20210816 16:45:08.241"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210816 16:36:05.003" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20210816 16:36:01.998" endtime="20210816 16:36:05.003"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.242" endtime="20210816 16:45:08.242"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>css=div.chat-block</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210816 16:36:05.004" endtime="20210816 16:36:05.023"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.242" endtime="20210816 16:45:08.243"/>
 </kw>
 <kw name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210816 16:36:05.023" endtime="20210816 16:36:07.146"/>
+<status status="NOT RUN" starttime="20210816 16:45:08.244" endtime="20210816 16:45:08.244"/>
 </kw>
-<status status="PASS" starttime="20210816 16:35:37.674" endtime="20210816 16:36:07.147"/>
+<status status="FAIL" starttime="20210816 16:45:01.304" endtime="20210816 16:45:08.244">Element 'id=divtitle' not visible after 5 seconds.</status>
 </test>
-<status status="PASS" starttime="20210816 16:35:07.364" endtime="20210816 16:36:07.150"/>
+<status status="FAIL" starttime="20210816 16:44:53.999" endtime="20210816 16:45:08.251"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Chatbot behavior">Chatbot behavior</stat>
+<stat pass="0" fail="2" skip="0" id="s1" name="PROD Web Chatbot behavior">PROD Web Chatbot behavior</stat>
 </suite>
 </statistics>
 <errors>

@@ -8,8 +8,8 @@ Library    Selenium2Library
 # app : Web_auto_test (Web)
 
 *** Test Cases ***
-Chat bot behavior check - SYNALIO Scenario v1 with Multiple chat window : SCENARIO FLOW
-    Open Browser    https://eugenechangresola.github.io/WebbotPages/STG/AUTO/MessageType/    Chrome
+Chat bot behavior check - SYNALIO Scenario v2 with Multiple chat window : SCENARIO FLOW
+    Open Browser    https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/AUTO/    Chrome
     Wait Until Element Is Visible    id=divtitle
     Wait Until Page Contains Element    id=synalio-iframe
     Select Frame    id=synalio-iframe
@@ -47,8 +47,8 @@ Chat bot behavior check - SYNALIO Scenario v1 with Multiple chat window : SCENAR
     Close Browser
 
 
-Chat bot behavior check - SYNALIO Scenario v1 with Multiple chat window : ACTION
-    Open Browser    https://eugenechangresola.github.io/WebbotPages/STG/AUTO/MessageType/action.html    Chrome
+Chat bot behavior check - SYNALIO Scenario v2 with Multiple chat window : ACTION
+    Open Browser    https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/AUTO/action.html    Chrome
     Wait Until Element Is Visible    id=divtitle
     Wait Until Page Contains Element    id=synalio-iframe
     Select Frame    id=synalio-iframe
