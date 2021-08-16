@@ -3,9 +3,9 @@
 Library    Selenium2Library
 
 # Test environment
-# Env : stg
-# cid : 127 (Scenario v1)
-# app : MesssageType (Web)
+# Env : prod
+# cid : 1906 (Scenario v2)
+# app : Web_auto_test (Web)
 
 *** Test Cases ***
 Chat bot behavior check - SYNALIO Scenario v1 with Multiple chat window : SCENARIO FLOW
