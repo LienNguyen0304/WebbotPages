@@ -9,7 +9,7 @@ Library    Selenium2Library
 
 *** Test Cases ***
 Chat bot behavior check - SYNALIO Scenario v2 with Multiple chat window : SCENARIO FLOW
-    Open Browser    https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/AUTO/    Chrome
+    Open Browser    https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/auto/    Chrome
     Wait Until Element Is Visible    id=divtitle
     Wait Until Page Contains Element    id=synalio-iframe
     Select Frame    id=synalio-iframe
@@ -48,7 +48,7 @@ Chat bot behavior check - SYNALIO Scenario v2 with Multiple chat window : SCENAR
 
 
 Chat bot behavior check - SYNALIO Scenario v2 with Multiple chat window : ACTION
-    Open Browser    https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/AUTO/action.html    Chrome
+    Open Browser    https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/auto/action.html    Chrome
     Wait Until Element Is Visible    id=divtitle
     Wait Until Page Contains Element    id=synalio-iframe
     Select Frame    id=synalio-iframe
@@ -60,7 +60,9 @@ Chat bot behavior check - SYNALIO Scenario v2 with Multiple chat window : ACTION
     Input Text    id=synalio-chat-text-input    text message
     Click Element    css=.send-text-btn
     Sleep    3
-    Element Should Contain    xpath=//*[@id="synalio-chat-message"]/div[3]/div[2]            [アクション]テキストメッセージ
+    # Element Should Contain    xpath=//*[@id="synalio-chat-message"]/div[3]/div[2]            [アクション]テキストメッセージ
+    Wait Until Element Is Visible    css=div.choice-block.reply-option.comp-anime-stop
+    Element Should Contain    css=#synalio-chat-message > div.left-talk-box.chat-message-body.comp-anime-stop.first-element > div.chat-block            [アクション]テキストメッセージ
     Input Text    id=synalio-chat-text-input    Submit Form
     Click Element    css=.send-text-btn
     Wait Until Element Is Visible    css=#input > div.chat-form-group.row.form-element > div > label
@@ -79,8 +81,9 @@ Chat bot behavior check - SYNALIO Scenario v2 with Multiple chat window : ACTION
     Input Text    id=synalio-chat-text-input    sys error
     Click Element    css=.send-text-btn
     Sleep    3
-    Wait Until Element Is Visible    css=div.chat-block
-    Element Should Contain    xpath=//*[@id="synalio-chat-message"]/div[10]/div[3]/span    メニューに戻る
+    Wait Until Element Is Visible    css=div.choice-block.reply-option.comp-anime-stop
+    # Element Should Contain    xpath=//*[@id="synalio-chat-message"]/div[10]/div[3]/span    メニューに戻る
+    Element Should Contain    css=div.choice-block.reply-option.comp-anime-stop > span    メニューに戻る
     Input Text    id=synalio-chat-text-input    メニュー
     Click Element    css=.send-text-btn
     Sleep    3
