@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.9.6 on win32)" generated="20210819 13:57:39.102" rpa="false" schemaversion="2">
+<suite id="s1" name="STG WEB Campaign popup all type check" source="C:\Users\Eugene\Documents\GitHub\EugeneChangResola.github.io\WebbotPages\robot\STG_WEB_Campaign_popup_all_type_check.robot">
+<test id="s1-t1" name="Campaign popup widget type 1">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://eugenechangresola.github.io/WebbotPages/STG/SYNALIO/149/?campaign=1</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210819 13:57:39.303" level="INFO">Opening browser 'chrome' to base url 'https://eugenechangresola.github.io/WebbotPages/STG/SYNALIO/149/?campaign=1'.</msg>
+<status status="PASS" starttime="20210819 13:57:39.303" endtime="20210819 13:57:41.523"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=divtitle</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210819 13:57:41.524" endtime="20210819 13:57:41.541"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=synalio-campaign</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210819 13:57:41.542" endtime="20210819 13:57:42.220"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=synalio-campaign</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210819 13:57:42.251" level="INFO">Element 'id=synalio-campaign' is displayed.</msg>
+<status status="PASS" starttime="20210819 13:57:42.221" endtime="20210819 13:57:42.251"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css=#synalio-campaign &gt; div &gt; div &gt; div.synalio-campaign_template.synalio-campaign-image_background</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210819 13:57:42.267" level="INFO">Current page contains element 'css=#synalio-campaign &gt; div &gt; div &gt; div.synalio-campaign_template.synalio-campaign-image_background'.</msg>
+<status status="PASS" starttime="20210819 13:57:42.252" endtime="20210819 13:57:42.268"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=#synalio-campaign-popup-link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210819 13:57:42.268" level="INFO">Clicking element 'css=#synalio-campaign-popup-link'.</msg>
+<status status="PASS" starttime="20210819 13:57:42.268" endtime="20210819 13:57:42.679"/>
+</kw>
+<status status="PASS" starttime="20210819 13:57:39.302" endtime="20210819 13:57:42.680"/>
+</test>
+<test id="s1-t2" name="Campaign popup widget type 2">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=divtitle</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210819 13:57:42.682" endtime="20210819 13:57:42.690"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=synalio-campaign</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210819 13:57:42.692" endtime="20210819 13:57:43.182"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=synalio-campaign</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210819 13:57:43.219" level="INFO">Element 'id=synalio-campaign' is displayed.</msg>
+<status status="PASS" starttime="20210819 13:57:43.183" endtime="20210819 13:57:43.219"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css=#synalio-campaign &gt; div &gt; div &gt; div.synalio-campaign_template.synalio-campaign-image_background</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210819 13:57:43.228" level="INFO">Current page contains element 'css=#synalio-campaign &gt; div &gt; div &gt; div.synalio-campaign_template.synalio-campaign-image_background'.</msg>
+<status status="PASS" starttime="20210819 13:57:43.220" endtime="20210819 13:57:43.228"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=#synalio-campaign-popup-link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210819 13:57:43.229" level="INFO">Clicking element 'css=#synalio-campaign-popup-link'.</msg>
+<status status="PASS" starttime="20210819 13:57:43.229" endtime="20210819 13:57:43.597"/>
+</kw>
+<status status="PASS" starttime="20210819 13:57:42.682" endtime="20210819 13:57:43.597"/>
+</test>
+<test id="s1-t3" name="Campaign popup widget type 3">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=divtitle</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210819 13:57:43.601" endtime="20210819 13:57:43.608"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=synalio-campaign</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210819 13:57:43.609" endtime="20210819 13:57:44.056"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=synalio-campaign</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210819 13:57:44.078" level="INFO">Element 'id=synalio-campaign' is displayed.</msg>
+<status status="PASS" starttime="20210819 13:57:44.057" endtime="20210819 13:57:44.078"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css=#synalio-campaign &gt; div &gt; div &gt; div.synalio-campaign-large_banner</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210819 13:57:44.091" level="INFO">Current page contains element 'css=#synalio-campaign &gt; div &gt; div &gt; div.synalio-campaign-large_banner'.</msg>
+<status status="PASS" starttime="20210819 13:57:44.079" endtime="20210819 13:57:44.092"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=#synalio-campaign-popup-link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210819 13:57:44.093" level="INFO">Clicking element 'css=#synalio-campaign-popup-link'.</msg>
+<status status="PASS" starttime="20210819 13:57:44.092" endtime="20210819 13:57:44.431"/>
+</kw>
+<status status="PASS" starttime="20210819 13:57:43.601" endtime="20210819 13:57:44.431"/>
+</test>
+<test id="s1-t4" name="Campaign popup widget type 4">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=divtitle</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210819 13:57:44.437" endtime="20210819 13:57:44.444"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=synalio-campaign</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210819 13:57:44.445" endtime="20210819 13:57:44.881"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=synalio-campaign</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210819 13:57:44.901" level="INFO">Element 'id=synalio-campaign' is displayed.</msg>
+<status status="PASS" starttime="20210819 13:57:44.882" endtime="20210819 13:57:44.901"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css=#synalio-campaign &gt; div &gt; div &gt; div.synalio-campaign-small_banner</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210819 13:57:44.914" level="INFO">Current page contains element 'css=#synalio-campaign &gt; div &gt; div &gt; div.synalio-campaign-small_banner'.</msg>
+<status status="PASS" starttime="20210819 13:57:44.902" endtime="20210819 13:57:44.914"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=#synalio-campaign-popup-link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210819 13:57:44.915" level="INFO">Clicking element 'css=#synalio-campaign-popup-link'.</msg>
+<status status="PASS" starttime="20210819 13:57:44.915" endtime="20210819 13:57:45.277"/>
+</kw>
+<status status="PASS" starttime="20210819 13:57:44.436" endtime="20210819 13:57:45.278"/>
+</test>
+<test id="s1-t5" name="Campaign popup widget type 5">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=divtitle</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210819 13:57:45.280" endtime="20210819 13:57:45.288"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=synalio-campaign</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210819 13:57:45.288" endtime="20210819 13:57:45.722"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=synalio-campaign</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210819 13:57:45.744" level="INFO">Element 'id=synalio-campaign' is displayed.</msg>
+<status status="PASS" starttime="20210819 13:57:45.723" endtime="20210819 13:57:45.744"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css=#synalio-campaign &gt; div &gt; div &gt; div.synalio-campaign-rich_template</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210819 13:57:45.758" level="INFO">Current page contains element 'css=#synalio-campaign &gt; div &gt; div &gt; div.synalio-campaign-rich_template'.</msg>
+<status status="PASS" starttime="20210819 13:57:45.745" endtime="20210819 13:57:45.758"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=#synalio-campaign-popup-link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210819 13:57:45.759" level="INFO">Clicking element 'css=#synalio-campaign-popup-link'.</msg>
+<status status="PASS" starttime="20210819 13:57:45.759" endtime="20210819 13:57:45.969"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=divtitle</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210819 13:57:45.969" endtime="20210819 13:57:45.975"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=synalio-campaign</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210819 13:57:45.976" endtime="20210819 13:57:46.419"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=synalio-campaign</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210819 13:57:46.443" level="INFO">Element 'id=synalio-campaign' is displayed.</msg>
+<status status="PASS" starttime="20210819 13:57:46.420" endtime="20210819 13:57:46.443"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210819 13:57:46.444" endtime="20210819 13:57:48.566"/>
+</kw>
+<status status="PASS" starttime="20210819 13:57:45.280" endtime="20210819 13:57:48.568"/>
+</test>
+<status status="PASS" starttime="20210819 13:57:39.104" endtime="20210819 13:57:48.570"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="STG WEB Campaign popup all type check">STG WEB Campaign popup all type check</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

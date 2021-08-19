@@ -1,5 +1,9 @@
 *** Settings ***
 Library    SeleniumLibrary
+Plugins    EdgePlugin
+Library    Dialogs
+
+
 # Library    Selenium2Library
 
 # Test environment
@@ -15,7 +19,7 @@ Library    SeleniumLibrary
 
 *** Test Cases ***
 PEP - LINEWORKS Chat Window : App settings and Scenario Editor DEMO Bot display check
-   Open Browser    https://pep.stg.resola.net/user/login    Chrome
+   Open Browser    https://pep.stg.resola.net/user/login    Edge   options=use_chromium=True
    Wait Until Page Contains Element    css=form > input.btn.btn-common-page.form-control
    Wait Until Element Is Visible    css=form > input.btn.btn-common-page.form-control
    Input Text    id=id_username    y.chou+stg_pep_appmanager@resola.ai

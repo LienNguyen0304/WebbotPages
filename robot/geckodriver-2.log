@@ -1,0 +1,13 @@
+1629255141334	geckodriver	INFO	Listening on 127.0.0.1:51483
+1629255144397	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Eugene\\AppData\\Local\\Temp\\rust_mozprofilerKB0BJ"
+1629255144774	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Eugene\\AppData\\Local\\Temp\\rust_mozprofilerKB0BJ\\search.json.mozlz4", (void 0)))
+1629255146653	Marionette	INFO	Listening on port 51500
+1629255147081	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://rebot.stg.resola.net/api/chatbox?appid=0a5e795ae0ff46f1af7e5ad10d0bab4a, line 351: unreachable code after return statement
+JavaScript warning: https://rebot.stg.resola.net/api/chatbox?appid=0a5e795ae0ff46f1af7e5ad10d0bab4a, line 351: unreachable code after return statement
+1629255174383	Marionette	INFO	Stopped listening on port 51500
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

@@ -1,0 +1,27 @@
+1629282381624	geckodriver	INFO	Listening on 127.0.0.1:63381
+1629282384704	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Eugene\\AppData\\Local\\Temp\\rust_mozprofilekXAH1U"
+1629282385115	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Eugene\\AppData\\Local\\Temp\\rust_mozprofilekXAH1U\\search.json.mozlz4", (void 0)))
+1629282387109	Marionette	INFO	Listening on port 63529
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x390097,name=PContent::Msg_InitBackground) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x390097,name=PContent::Msg_InitBackground) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3900D3,name=PContent::Msg_ScriptErrorWithStack) Channel closing: too late to send/recv, messages will be lost
+
+1629282387376	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://synalio.stg.resola.net/api/chatbox?appid=de5bb3d97e84424ca1d782d6555e48b9, line 349: unreachable code after return statement
+JavaScript warning: https://synalio.stg.resola.net/api/chatbox?appid=de5bb3d97e84424ca1d782d6555e48b9, line 349: unreachable code after return statement
+JavaScript warning: https://synalio.stg.resola.net/api/chatbox?appid=de5bb3d97e84424ca1d782d6555e48b9, line 349: unreachable code after return statement
+JavaScript warning: https://synalio.stg.resola.net/api/chatbox?appid=de5bb3d97e84424ca1d782d6555e48b9, line 349: unreachable code after return statement
+1629282395712	Marionette	INFO	Stopped listening on port 63529
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

@@ -1,15 +1,18 @@
 *** Settings ***
-# Library    SeleniumLibrary
-Library    Selenium2Library
+Library    SeleniumLibrary
+Library    Dialogs
 
 # Test environment
 # Env : stg
 # cid : 127 (Scenario v1)
 # app : MesssageType (Web)
 
+*** Variables ***
+${browser}
+
 *** Test Cases ***
 Chat bot behavior check - SYNALIO Scenario v1 with Multiple chat window : SCENARIO FLOW
-    Open Browser    https://eugenechangresola.github.io/WebbotPages/STG/AUTO/MessageType/    Chrome
+    Open Browser    https://eugenechangresola.github.io/WebbotPages/STG/AUTO/MessageType/    ${browser}
     Wait Until Element Is Visible    id=divtitle
     Wait Until Page Contains Element    id=synalio-iframe
     Select Frame    id=synalio-iframe
@@ -48,7 +51,7 @@ Chat bot behavior check - SYNALIO Scenario v1 with Multiple chat window : SCENAR
 
 
 Chat bot behavior check - SYNALIO Scenario v1 with Multiple chat window : ACTION
-    Open Browser    https://eugenechangresola.github.io/WebbotPages/STG/AUTO/MessageType/action.html    Chrome
+    Open Browser    https://eugenechangresola.github.io/WebbotPages/STG/AUTO/MessageType/action.html    ${browser}
     Wait Until Element Is Visible    id=divtitle
     Wait Until Page Contains Element    id=synalio-iframe
     Select Frame    id=synalio-iframe
