@@ -1,198 +1,388 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0.3 (Python 3.9.6 on win32)" generated="20210819 13:57:39.102" rpa="false" schemaversion="2">
-<suite id="s1" name="STG WEB Campaign popup all type check" source="C:\Users\Eugene\Documents\GitHub\EugeneChangResola.github.io\WebbotPages\robot\STG_WEB_Campaign_popup_all_type_check.robot">
-<test id="s1-t1" name="Campaign popup widget type 1">
+<robot generator="Robot 4.0.3 (Python 3.9.6 on win32)" generated="20210820 21:25:48.752" rpa="false" schemaversion="2">
+<suite id="s1" name="STG Web Chat Visual AllType check" source="C:\Users\Eugene\Documents\GitHub\EugeneChangResola.github.io\WebbotPages\robot\STG_Web_Chat_Visual_AllType_check.robot">
+<test id="s1-t1" name="Chat Visual:Type 1">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://eugenechangresola.github.io/WebbotPages/STG/SYNALIO/149/?campaign=1</arg>
-<arg>chrome</arg>
+<arg>${test_page}?chatvisual=1</arg>
+<arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210819 13:57:39.303" level="INFO">Opening browser 'chrome' to base url 'https://eugenechangresola.github.io/WebbotPages/STG/SYNALIO/149/?campaign=1'.</msg>
-<status status="PASS" starttime="20210819 13:57:39.303" endtime="20210819 13:57:41.523"/>
+<msg timestamp="20210820 21:25:48.952" level="INFO">Opening browser 'Chrome' to base url 'https://eugenechangresola.github.io/WebbotPages/STG/SYNALIO/149/?chatvisual=1'.</msg>
+<status status="PASS" starttime="20210820 21:25:48.951" endtime="20210820 21:25:51.662"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>id=divtitle</arg>
+<arg>id=synalio-iframe</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20210819 13:57:41.524" endtime="20210819 13:57:41.541"/>
+<status status="PASS" starttime="20210820 21:25:51.664" endtime="20210820 21:25:51.674"/>
 </kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>id=synalio-campaign</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20210819 13:57:41.542" endtime="20210819 13:57:42.220"/>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>id=synalio-iframe</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20210820 21:25:51.675" level="INFO">Selecting frame 'id=synalio-iframe'.</msg>
+<status status="PASS" starttime="20210820 21:25:51.674" endtime="20210820 21:25:51.696"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css=body &gt; div &gt; div.outer-box &gt; div.main-box &gt; div.outer-box-set-box &gt; div.inner-box-img-box</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210820 21:25:51.696" endtime="20210820 21:25:52.895"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210820 21:25:54.897" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210820 21:25:52.896" endtime="20210820 21:25:54.897"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>id=synalio-campaign</arg>
+<arg>css=body &gt; div &gt; div.outer-box &gt; div.main-box &gt; div.outer-box-set-box &gt; div.inner-box-txt-box</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20210819 13:57:42.251" level="INFO">Element 'id=synalio-campaign' is displayed.</msg>
-<status status="PASS" starttime="20210819 13:57:42.221" endtime="20210819 13:57:42.251"/>
+<msg timestamp="20210820 21:25:54.918" level="INFO">Element 'css=body &gt; div &gt; div.outer-box &gt; div.main-box &gt; div.outer-box-set-box &gt; div.inner-box-txt-box' is displayed.</msg>
+<status status="PASS" starttime="20210820 21:25:54.898" endtime="20210820 21:25:54.918"/>
 </kw>
-<kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>css=#synalio-campaign &gt; div &gt; div &gt; div.synalio-campaign_template.synalio-campaign-image_background</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20210819 13:57:42.267" level="INFO">Current page contains element 'css=#synalio-campaign &gt; div &gt; div &gt; div.synalio-campaign_template.synalio-campaign-image_background'.</msg>
-<status status="PASS" starttime="20210819 13:57:42.252" endtime="20210819 13:57:42.268"/>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>css=div.window-box</arg>
+<arg>STG_ChatVisual_Type1.png</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20210820 21:25:55.271" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="STG_ChatVisual_Type1.png"&gt;&lt;img src="STG_ChatVisual_Type1.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210820 21:25:54.919" endtime="20210820 21:25:55.271"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210820 21:25:57.280" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210820 21:25:55.272" endtime="20210820 21:25:57.280"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>css=#synalio-campaign-popup-link</arg>
+<arg>id=btn-open-close</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210819 13:57:42.268" level="INFO">Clicking element 'css=#synalio-campaign-popup-link'.</msg>
-<status status="PASS" starttime="20210819 13:57:42.268" endtime="20210819 13:57:42.679"/>
+<msg timestamp="20210820 21:25:57.281" level="INFO">Clicking element 'id=btn-open-close'.</msg>
+<status status="PASS" starttime="20210820 21:25:57.281" endtime="20210820 21:25:57.347"/>
 </kw>
-<status status="PASS" starttime="20210819 13:57:39.302" endtime="20210819 13:57:42.680"/>
-</test>
-<test id="s1-t2" name="Campaign popup widget type 2">
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>id=divtitle</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20210819 13:57:42.682" endtime="20210819 13:57:42.690"/>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>css=body &gt; div &gt; div.outer-box &gt; div.main-box &gt; div.outer-box-set-box &gt; div.inner-box-txt-box</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20210820 21:25:57.348" endtime="20210820 21:25:57.595"/>
 </kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>id=synalio-campaign</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20210819 13:57:42.692" endtime="20210819 13:57:43.182"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>id=synalio-campaign</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20210819 13:57:43.219" level="INFO">Element 'id=synalio-campaign' is displayed.</msg>
-<status status="PASS" starttime="20210819 13:57:43.183" endtime="20210819 13:57:43.219"/>
-</kw>
-<kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>css=#synalio-campaign &gt; div &gt; div &gt; div.synalio-campaign_template.synalio-campaign-image_background</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20210819 13:57:43.228" level="INFO">Current page contains element 'css=#synalio-campaign &gt; div &gt; div &gt; div.synalio-campaign_template.synalio-campaign-image_background'.</msg>
-<status status="PASS" starttime="20210819 13:57:43.220" endtime="20210819 13:57:43.228"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210820 21:25:59.603" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210820 21:25:57.595" endtime="20210820 21:25:59.603"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>css=#synalio-campaign-popup-link</arg>
+<arg>css=div.btn-set-box</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210819 13:57:43.229" level="INFO">Clicking element 'css=#synalio-campaign-popup-link'.</msg>
-<status status="PASS" starttime="20210819 13:57:43.229" endtime="20210819 13:57:43.597"/>
+<msg timestamp="20210820 21:25:59.606" level="INFO">Clicking element 'css=div.btn-set-box'.</msg>
+<status status="PASS" starttime="20210820 21:25:59.606" endtime="20210820 21:25:59.672"/>
 </kw>
-<status status="PASS" starttime="20210819 13:57:42.682" endtime="20210819 13:57:43.597"/>
-</test>
-<test id="s1-t3" name="Campaign popup widget type 3">
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>id=divtitle</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20210819 13:57:43.601" endtime="20210819 13:57:43.608"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css=body &gt; div &gt; div.outer-box &gt; div.header-box &gt; div.inner-header-set-box &gt; div.name-box</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210820 21:25:59.673" endtime="20210820 21:26:00.146"/>
 </kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>id=synalio-campaign</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20210819 13:57:43.609" endtime="20210819 13:57:44.056"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>id=synalio-campaign</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20210819 13:57:44.078" level="INFO">Element 'id=synalio-campaign' is displayed.</msg>
-<status status="PASS" starttime="20210819 13:57:44.057" endtime="20210819 13:57:44.078"/>
-</kw>
-<kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>css=#synalio-campaign &gt; div &gt; div &gt; div.synalio-campaign-large_banner</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20210819 13:57:44.091" level="INFO">Current page contains element 'css=#synalio-campaign &gt; div &gt; div &gt; div.synalio-campaign-large_banner'.</msg>
-<status status="PASS" starttime="20210819 13:57:44.079" endtime="20210819 13:57:44.092"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>css=#synalio-campaign-popup-link</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210819 13:57:44.093" level="INFO">Clicking element 'css=#synalio-campaign-popup-link'.</msg>
-<status status="PASS" starttime="20210819 13:57:44.092" endtime="20210819 13:57:44.431"/>
-</kw>
-<status status="PASS" starttime="20210819 13:57:43.601" endtime="20210819 13:57:44.431"/>
-</test>
-<test id="s1-t4" name="Campaign popup widget type 4">
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>id=divtitle</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20210819 13:57:44.437" endtime="20210819 13:57:44.444"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>id=synalio-campaign</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20210819 13:57:44.445" endtime="20210819 13:57:44.881"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>id=synalio-campaign</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20210819 13:57:44.901" level="INFO">Element 'id=synalio-campaign' is displayed.</msg>
-<status status="PASS" starttime="20210819 13:57:44.882" endtime="20210819 13:57:44.901"/>
-</kw>
-<kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>css=#synalio-campaign &gt; div &gt; div &gt; div.synalio-campaign-small_banner</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20210819 13:57:44.914" level="INFO">Current page contains element 'css=#synalio-campaign &gt; div &gt; div &gt; div.synalio-campaign-small_banner'.</msg>
-<status status="PASS" starttime="20210819 13:57:44.902" endtime="20210819 13:57:44.914"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>css=#synalio-campaign-popup-link</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210819 13:57:44.915" level="INFO">Clicking element 'css=#synalio-campaign-popup-link'.</msg>
-<status status="PASS" starttime="20210819 13:57:44.915" endtime="20210819 13:57:45.277"/>
-</kw>
-<status status="PASS" starttime="20210819 13:57:44.436" endtime="20210819 13:57:45.278"/>
-</test>
-<test id="s1-t5" name="Campaign popup widget type 5">
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>id=divtitle</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20210819 13:57:45.280" endtime="20210819 13:57:45.288"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>id=synalio-campaign</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20210819 13:57:45.288" endtime="20210819 13:57:45.722"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>id=synalio-campaign</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20210819 13:57:45.744" level="INFO">Element 'id=synalio-campaign' is displayed.</msg>
-<status status="PASS" starttime="20210819 13:57:45.723" endtime="20210819 13:57:45.744"/>
-</kw>
-<kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>css=#synalio-campaign &gt; div &gt; div &gt; div.synalio-campaign-rich_template</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20210819 13:57:45.758" level="INFO">Current page contains element 'css=#synalio-campaign &gt; div &gt; div &gt; div.synalio-campaign-rich_template'.</msg>
-<status status="PASS" starttime="20210819 13:57:45.745" endtime="20210819 13:57:45.758"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>css=#synalio-campaign-popup-link</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210819 13:57:45.759" level="INFO">Clicking element 'css=#synalio-campaign-popup-link'.</msg>
-<status status="PASS" starttime="20210819 13:57:45.759" endtime="20210819 13:57:45.969"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>id=divtitle</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20210819 13:57:45.969" endtime="20210819 13:57:45.975"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>id=synalio-campaign</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20210819 13:57:45.976" endtime="20210819 13:57:46.419"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>id=synalio-campaign</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20210819 13:57:46.443" level="INFO">Element 'id=synalio-campaign' is displayed.</msg>
-<status status="PASS" starttime="20210819 13:57:46.420" endtime="20210819 13:57:46.443"/>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20210820 21:26:00.147" endtime="20210820 21:26:00.150"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210819 13:57:46.444" endtime="20210819 13:57:48.566"/>
+<status status="PASS" starttime="20210820 21:26:00.151" endtime="20210820 21:26:02.272"/>
 </kw>
-<status status="PASS" starttime="20210819 13:57:45.280" endtime="20210819 13:57:48.568"/>
+<status status="PASS" starttime="20210820 21:25:48.951" endtime="20210820 21:26:02.274"/>
 </test>
-<status status="PASS" starttime="20210819 13:57:39.104" endtime="20210819 13:57:48.570"/>
+<test id="s1-t2" name="Chat Visual:Type 2">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${test_page}?chatvisual=2</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210820 21:26:02.276" level="INFO">Opening browser 'Chrome' to base url 'https://eugenechangresola.github.io/WebbotPages/STG/SYNALIO/149/?chatvisual=2'.</msg>
+<status status="PASS" starttime="20210820 21:26:02.276" endtime="20210820 21:26:04.566"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=synalio-iframe</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210820 21:26:04.567" endtime="20210820 21:26:04.577"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>id=synalio-iframe</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20210820 21:26:04.578" level="INFO">Selecting frame 'id=synalio-iframe'.</msg>
+<status status="PASS" starttime="20210820 21:26:04.578" endtime="20210820 21:26:04.600"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css=div.msg-block</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210820 21:26:04.600" endtime="20210820 21:26:05.947"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210820 21:26:07.951" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210820 21:26:05.948" endtime="20210820 21:26:07.951"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>css=div.window-box</arg>
+<arg>STG_ChatVisual_Type2.png</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20210820 21:26:08.107" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="STG_ChatVisual_Type2.png"&gt;&lt;img src="STG_ChatVisual_Type2.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210820 21:26:07.952" endtime="20210820 21:26:08.108"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210820 21:26:10.117" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210820 21:26:08.108" endtime="20210820 21:26:10.117"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=btn-open-close</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210820 21:26:10.118" level="INFO">Clicking element 'id=btn-open-close'.</msg>
+<status status="PASS" starttime="20210820 21:26:10.118" endtime="20210820 21:26:10.183"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>css=div.msg-block</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20210820 21:26:10.184" endtime="20210820 21:26:10.431"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210820 21:26:12.441" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210820 21:26:10.432" endtime="20210820 21:26:12.441"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=div.btn-set-box</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210820 21:26:12.443" level="INFO">Clicking element 'css=div.btn-set-box'.</msg>
+<status status="PASS" starttime="20210820 21:26:12.443" endtime="20210820 21:26:12.508"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css=body &gt; div &gt; div.outer-box &gt; div.header-box &gt; div.inner-header-set-box &gt; div.name-box</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210820 21:26:12.509" endtime="20210820 21:26:13.191"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20210820 21:26:13.192" endtime="20210820 21:26:13.195"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210820 21:26:13.196" endtime="20210820 21:26:15.304"/>
+</kw>
+<status status="PASS" starttime="20210820 21:26:02.275" endtime="20210820 21:26:15.307"/>
+</test>
+<test id="s1-t3" name="Chat Visual:Type 3">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${test_page}?chatvisual=3</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210820 21:26:15.330" level="INFO">Opening browser 'Chrome' to base url 'https://eugenechangresola.github.io/WebbotPages/STG/SYNALIO/149/?chatvisual=3'.</msg>
+<status status="PASS" starttime="20210820 21:26:15.330" endtime="20210820 21:26:17.574"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=synalio-iframe</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210820 21:26:17.575" endtime="20210820 21:26:17.585"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>id=synalio-iframe</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20210820 21:26:17.586" level="INFO">Selecting frame 'id=synalio-iframe'.</msg>
+<status status="PASS" starttime="20210820 21:26:17.586" endtime="20210820 21:26:17.607"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css=div.img-box</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210820 21:26:17.608" endtime="20210820 21:26:19.859"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210820 21:26:21.863" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210820 21:26:19.860" endtime="20210820 21:26:21.863"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>css=div.window-box</arg>
+<arg>STG_ChatVisual_Type3A.png</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20210820 21:26:22.005" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="STG_ChatVisual_Type3A.png"&gt;&lt;img src="STG_ChatVisual_Type3A.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210820 21:26:21.863" endtime="20210820 21:26:22.005"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210820 21:26:24.013" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210820 21:26:22.006" endtime="20210820 21:26:24.013"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=synalio-visual-close</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210820 21:26:24.014" level="INFO">Clicking element 'id=synalio-visual-close'.</msg>
+<status status="PASS" starttime="20210820 21:26:24.013" endtime="20210820 21:26:24.077"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>css=div.img-box</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20210820 21:26:24.078" endtime="20210820 21:26:24.537"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210820 21:26:26.549" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210820 21:26:24.538" endtime="20210820 21:26:26.549"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>css=div.window-box</arg>
+<arg>STG_ChatVisual_Type3A_minimized.png</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20210820 21:26:26.651" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="STG_ChatVisual_Type3A_minimized.png"&gt;&lt;img src="STG_ChatVisual_Type3A_minimized.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210820 21:26:26.550" endtime="20210820 21:26:26.651"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210820 21:26:28.655" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210820 21:26:26.651" endtime="20210820 21:26:28.655"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=div.btn-set-box</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210820 21:26:28.657" level="INFO">Clicking element 'css=div.btn-set-box'.</msg>
+<status status="PASS" starttime="20210820 21:26:28.657" endtime="20210820 21:26:28.724"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css=body &gt; div &gt; div.outer-box &gt; div.header-box &gt; div.inner-header-set-box &gt; div.name-box</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210820 21:26:28.725" endtime="20210820 21:26:29.203"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20210820 21:26:29.204" endtime="20210820 21:26:29.207"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210820 21:26:29.208" endtime="20210820 21:26:31.329"/>
+</kw>
+<status status="PASS" starttime="20210820 21:26:15.328" endtime="20210820 21:26:31.332"/>
+</test>
+<test id="s1-t4" name="Chat Visual:Type 3 (minimize to image visual)">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://eugenechangresola.github.io/WebbotPages/STG/SYNALIO/?chatvisual=3</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210820 21:26:31.343" level="INFO">Opening browser 'chrome' to base url 'https://eugenechangresola.github.io/WebbotPages/STG/SYNALIO/?chatvisual=3'.</msg>
+<status status="PASS" starttime="20210820 21:26:31.342" endtime="20210820 21:26:34.165"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=synalio-iframe</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210820 21:26:34.165" endtime="20210820 21:26:34.176"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>id=synalio-iframe</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20210820 21:26:34.177" level="INFO">Selecting frame 'id=synalio-iframe'.</msg>
+<status status="PASS" starttime="20210820 21:26:34.177" endtime="20210820 21:26:34.199"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css=div.img-box</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210820 21:26:34.200" endtime="20210820 21:26:36.664"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210820 21:26:38.675" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210820 21:26:36.665" endtime="20210820 21:26:38.675"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>css=div.window-box</arg>
+<arg>STG_ChatVisual_Type3B.png</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20210820 21:26:38.907" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="STG_ChatVisual_Type3B.png"&gt;&lt;img src="STG_ChatVisual_Type3B.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210820 21:26:38.676" endtime="20210820 21:26:38.907"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210820 21:26:40.923" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210820 21:26:38.908" endtime="20210820 21:26:40.923"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=div.img-box</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210820 21:26:40.925" level="INFO">Clicking element 'css=div.img-box'.</msg>
+<status status="PASS" starttime="20210820 21:26:40.924" endtime="20210820 21:26:40.987"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css=body &gt; div &gt; div.outer-box &gt; div.header-box &gt; div.inner-header-set-box &gt; div.name-box</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210820 21:26:40.987" endtime="20210820 21:26:41.488"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=btn-open-close</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210820 21:26:41.489" endtime="20210820 21:26:41.509"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=btn-open-close</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210820 21:26:41.510" level="INFO">Clicking element 'id=btn-open-close'.</msg>
+<status status="PASS" starttime="20210820 21:26:41.510" endtime="20210820 21:26:41.572"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>css=body &gt; div &gt; div.outer-box &gt; div.header-box &gt; div.inner-header-set-box &gt; div.name-box</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20210820 21:26:41.573" endtime="20210820 21:26:42.082"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210820 21:26:44.091" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210820 21:26:42.083" endtime="20210820 21:26:44.091"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>css=div.window-box</arg>
+<arg>STG_ChatVisual_Type3B_minimized.png</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20210820 21:26:44.223" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="STG_ChatVisual_Type3B_minimized.png"&gt;&lt;img src="STG_ChatVisual_Type3B_minimized.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210820 21:26:44.093" endtime="20210820 21:26:44.223"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210820 21:26:46.232" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210820 21:26:44.224" endtime="20210820 21:26:46.232"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=div.img-box</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210820 21:26:46.233" level="INFO">Clicking element 'css=div.img-box'.</msg>
+<status status="PASS" starttime="20210820 21:26:46.233" endtime="20210820 21:26:46.299"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css=body &gt; div &gt; div.outer-box &gt; div.header-box &gt; div.inner-header-set-box &gt; div.name-box</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210820 21:26:46.300" endtime="20210820 21:26:46.782"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20210820 21:26:46.784" endtime="20210820 21:26:46.787"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210820 21:26:46.788" endtime="20210820 21:26:48.907"/>
+</kw>
+<status status="PASS" starttime="20210820 21:26:31.340" endtime="20210820 21:26:48.908"/>
+</test>
+<status status="PASS" starttime="20210820 21:25:48.753" endtime="20210820 21:26:48.911"/>
 </suite>
 <statistics>
 <total>
-<stat pass="5" fail="0" skip="0">All Tests</stat>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="5" fail="0" skip="0" id="s1" name="STG WEB Campaign popup all type check">STG WEB Campaign popup all type check</stat>
+<stat pass="4" fail="0" skip="0" id="s1" name="STG Web Chat Visual AllType check">STG Web Chat Visual AllType check</stat>
 </suite>
 </statistics>
 <errors>
