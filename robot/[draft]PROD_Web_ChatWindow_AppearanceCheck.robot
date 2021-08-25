@@ -10,7 +10,7 @@ Library    SeleniumLibrary
 *** Test Cases ***
 # New Chat window section:
 Chat Window Appearance - New chat window and N seconds
-    Open Browser    https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/auto/?appearance=NSeconds    Chrome
+    Open Browser    https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/auto/APPEARANCE/NSeconds.html    Chrome
     Wait Until Page Contains Element    id=synalio-iframe
     Select Frame    id=synalio-iframe
     Element Should Not Be Visible    css=div.window-box
@@ -21,9 +21,8 @@ Chat Window Appearance - New chat window and N seconds
     Element Should Be Visible    css=#synalio-chat-message > div > div.chat-block
     Close Browser
 
-*** comment ***
 Chat Window Appearance - New chat window and page loaded
-    Open Browser    https://eugenechangresola.github.io/WebbotPages/STG/AUTO/chatwindow_pageload.html    Chrome
+    Open Browser    https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/auto/APPEARANCE/pageload.html    Chrome
     Wait Until Page Contains Element    id=synalio-iframe
     Select Frame    id=synalio-iframe
     Sleep    3
@@ -31,7 +30,7 @@ Chat Window Appearance - New chat window and page loaded
     Close Browser
 
 Chat Window Appearance - New chat window and scroll to element
-    Open Browser    https://eugenechangresola.github.io/WebbotPages/STG/AUTO/chatwindow_scrolltoelement.html    Chrome
+    Open Browser    https://eugenechangresola.github.io/WebbotPages/STG/AUTO/APPEARANCE/ScrollToElement.html   Chrome
     Wait Until Page Contains Element    id=synalio-iframe
     Select Frame    id=synalio-iframe
     Sleep    3

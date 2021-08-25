@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210825 19:58:23.315" rpa="false" schemaversion="2">
+<suite id="s1" name="Test Open Page" source="C:\Users\Eugene\Documents\GitHub\EugeneChangResola.github.io\WebbotPages\robot\test_open_page.robot">
+<test id="s1-t1" name="Open web Page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://news.google.co.jp</arg>
+<arg>Edge</arg>
+<arg>options=use_chromium=True</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210825 19:58:23.550" level="INFO">Opening browser 'Edge' to base url 'https://news.google.co.jp'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210825 19:58:23.557" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20210825 19:58:23.557" endtime="20210825 19:58:23.557"/>
+</kw>
+<msg timestamp="20210825 19:58:23.560" level="FAIL">AttributeError: 'Options' object has no attribute 'use_chromium'</msg>
+<status status="FAIL" starttime="20210825 19:58:23.549" endtime="20210825 19:58:23.560"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>20</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20210825 19:58:23.561" endtime="20210825 19:58:23.562"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20210825 19:58:23.562" endtime="20210825 19:58:23.562"/>
+</kw>
+<status status="FAIL" starttime="20210825 19:58:23.548" endtime="20210825 19:58:23.563">AttributeError: 'Options' object has no attribute 'use_chromium'</status>
+</test>
+<status status="FAIL" starttime="20210825 19:58:23.316" endtime="20210825 19:58:23.567"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test Open Page">Test Open Page</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210825 19:58:23.536" level="ERROR">Error in file 'C:\Users\Eugene\Documents\GitHub\EugeneChangResola.github.io\WebbotPages\robot\test_open_page.robot' on line 4: Importing library 'C:\Users\Eugene\Documents\GitHub\EugeneChangResola.github.io\WebbotPages\robot\EdgePlugin.py' failed: ImportError: attempted relative import with no known parent package
+Traceback (most recent call last):
+  File "C:\Users\Eugene\Documents\GitHub\EugeneChangResola.github.io\WebbotPages\robot\EdgePlugin.py", line 8, in &lt;module&gt;
+    from .chromeOptions import ChromiumOptions
+PYTHONPATH:
+  C:\Users\Eugene\AppData\Local\Programs\Python\Python39\Scripts\robot.exe
+  c:\users\eugene\appdata\local\programs\python\python39\python39.zip
+  c:\users\eugene\appdata\local\programs\python\python39\DLLs
+  c:\users\eugene\appdata\local\programs\python\python39\lib
+  c:\users\eugene\appdata\local\programs\python\python39
+  c:\users\eugene\appdata\local\programs\python\python39\lib\site-packages</msg>
+</errors>
+</robot>
