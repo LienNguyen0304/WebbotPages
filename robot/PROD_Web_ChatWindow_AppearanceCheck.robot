@@ -3,21 +3,25 @@ Library    SeleniumLibrary
 # Library    Selenium2Library
 
 # Test environment
-# Env : stg
-# cid : 127 (Scenario v1)
-# app : Web_chatwindow_Nsecond (Web)
+# Env : prod
+# cid : 1906 (Scenario v2)
+# app : Web_auto_test
 
 *** Test Cases ***
 # New Chat window section:
 Chat Window Appearance - New chat window and N seconds
-    Open Browser    https://eugenechangresola.github.io/WebbotPages/STG/AUTO/chatwindow_Nseconds.html    Chrome
+    Open Browser    https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/auto/?appearance=NSeconds    Chrome
     Wait Until Page Contains Element    id=synalio-iframe
     Select Frame    id=synalio-iframe
     Element Should Not Be Visible    css=div.window-box
-    Sleep    18
+    Sleep    12
     Element Should Be Visible    css=div.window-box
+    Element Should Not Be Visible    css=#synalio-chat-message > div > div.chat-block
+    Sleep    6
+    Element Should Be Visible    css=#synalio-chat-message > div > div.chat-block
     Close Browser
 
+*** comment ***
 Chat Window Appearance - New chat window and page loaded
     Open Browser    https://eugenechangresola.github.io/WebbotPages/STG/AUTO/chatwindow_pageload.html    Chrome
     Wait Until Page Contains Element    id=synalio-iframe
