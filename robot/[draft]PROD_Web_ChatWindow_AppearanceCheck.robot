@@ -30,7 +30,7 @@ Chat Window Appearance - New chat window and page loaded
     Close Browser
 
 Chat Window Appearance - New chat window and scroll to element
-    Open Browser    https://eugenechangresola.github.io/WebbotPages/STG/AUTO/APPEARANCE/ScrollToElement.html   Chrome
+    Open Browser    https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/auto/APPEARANCE/ScrollToElement.html   Chrome
     Wait Until Page Contains Element    id=synalio-iframe
     Select Frame    id=synalio-iframe
     Sleep    3
@@ -44,8 +44,8 @@ Chat Window Appearance - New chat window and scroll to element
     Select Frame    id=synalio-iframe
     Element Should Not Be Visible    css=div.window-box
     Unselect Frame
-    Execute Javascript    window.scrollTo(0,9000)
-    Sleep    1
+    Execute Javascript    window.scrollTo(0,10000)
+    Sleep    3
     Select Frame    id=synalio-iframe
     Element Should Be Visible    css=div.window-box
     Unselect Frame
@@ -64,6 +64,7 @@ Chat Window Appearance - New chat window and toggle button
     Element Should Be Visible    css=div.window-box
     Close Browser
 
+*** Comments ***
 # Old Chat window section:
 Chat Window Appearance- Old chat window and N seconds
     Open Browser    https://eugenechangresola.github.io/WebbotPages/STG/AUTO/chatwindow_old_Nseconds.html    Chrome

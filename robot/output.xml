@@ -1,55 +1,300 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210825 19:58:23.315" rpa="false" schemaversion="2">
-<suite id="s1" name="Test Open Page" source="C:\Users\Eugene\Documents\GitHub\EugeneChangResola.github.io\WebbotPages\robot\test_open_page.robot">
-<test id="s1-t1" name="Open web Page">
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210825 20:36:21.846" rpa="false" schemaversion="2">
+<suite id="s1" name="[draft]PROD Web ChatWindow AppearanceCheck" source="C:\Users\Eugene\Documents\GitHub\EugeneChangResola.github.io\WebbotPages\robot\[draft]PROD_Web_ChatWindow_AppearanceCheck.robot">
+<test id="s1-t1" name="Chat Window Appearance - New chat window and N seconds">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://news.google.co.jp</arg>
-<arg>Edge</arg>
-<arg>options=use_chromium=True</arg>
+<arg>https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/auto/APPEARANCE/NSeconds.html</arg>
+<arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210825 19:58:23.550" level="INFO">Opening browser 'Edge' to base url 'https://news.google.co.jp'.</msg>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20210825 19:58:23.557" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<status status="PASS" starttime="20210825 19:58:23.557" endtime="20210825 19:58:23.557"/>
+<msg timestamp="20210825 20:36:22.057" level="INFO">Opening browser 'Chrome' to base url 'https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/auto/APPEARANCE/NSeconds.html'.</msg>
+<status status="PASS" starttime="20210825 20:36:22.057" endtime="20210825 20:36:24.582"/>
 </kw>
-<msg timestamp="20210825 19:58:23.560" level="FAIL">AttributeError: 'Options' object has no attribute 'use_chromium'</msg>
-<status status="FAIL" starttime="20210825 19:58:23.549" endtime="20210825 19:58:23.560"/>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=synalio-iframe</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210825 20:36:24.583" endtime="20210825 20:36:24.595"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>id=synalio-iframe</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20210825 20:36:24.595" level="INFO">Selecting frame 'id=synalio-iframe'.</msg>
+<status status="PASS" starttime="20210825 20:36:24.595" endtime="20210825 20:36:24.620"/>
+</kw>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>css=div.window-box</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20210825 20:36:24.632" level="INFO">Element 'css=div.window-box' did not exist.</msg>
+<status status="PASS" starttime="20210825 20:36:24.620" endtime="20210825 20:36:24.632"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>20</arg>
+<arg>12</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20210825 19:58:23.561" endtime="20210825 19:58:23.562"/>
+<msg timestamp="20210825 20:36:36.637" level="INFO">Slept 12 seconds</msg>
+<status status="PASS" starttime="20210825 20:36:24.632" endtime="20210825 20:36:36.637"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>css=div.window-box</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210825 20:36:36.658" level="INFO">Element 'css=div.window-box' is displayed.</msg>
+<status status="PASS" starttime="20210825 20:36:36.638" endtime="20210825 20:36:36.658"/>
+</kw>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>css=#synalio-chat-message &gt; div &gt; div.chat-block</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20210825 20:36:36.669" level="INFO">Element 'css=#synalio-chat-message &gt; div &gt; div.chat-block' did not exist.</msg>
+<status status="PASS" starttime="20210825 20:36:36.659" endtime="20210825 20:36:36.669"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>6</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210825 20:36:42.680" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" starttime="20210825 20:36:36.670" endtime="20210825 20:36:42.680"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>css=#synalio-chat-message &gt; div &gt; div.chat-block</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210825 20:36:42.701" level="INFO">Element 'css=#synalio-chat-message &gt; div &gt; div.chat-block' is displayed.</msg>
+<status status="PASS" starttime="20210825 20:36:42.681" endtime="20210825 20:36:42.701"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" starttime="20210825 19:58:23.562" endtime="20210825 19:58:23.562"/>
+<status status="PASS" starttime="20210825 20:36:42.702" endtime="20210825 20:36:44.830"/>
 </kw>
-<status status="FAIL" starttime="20210825 19:58:23.548" endtime="20210825 19:58:23.563">AttributeError: 'Options' object has no attribute 'use_chromium'</status>
+<status status="PASS" starttime="20210825 20:36:22.056" endtime="20210825 20:36:44.833"/>
 </test>
-<status status="FAIL" starttime="20210825 19:58:23.316" endtime="20210825 19:58:23.567"/>
+<test id="s1-t2" name="Chat Window Appearance - New chat window and page loaded">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/auto/APPEARANCE/pageload.html</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210825 20:36:44.853" level="INFO">Opening browser 'Chrome' to base url 'https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/auto/APPEARANCE/pageload.html'.</msg>
+<status status="PASS" starttime="20210825 20:36:44.852" endtime="20210825 20:36:47.367"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=synalio-iframe</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210825 20:36:47.368" endtime="20210825 20:36:47.379"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>id=synalio-iframe</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20210825 20:36:47.380" level="INFO">Selecting frame 'id=synalio-iframe'.</msg>
+<status status="PASS" starttime="20210825 20:36:47.380" endtime="20210825 20:36:47.403"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210825 20:36:50.411" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210825 20:36:47.404" endtime="20210825 20:36:50.411"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>css=div.window-box</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210825 20:36:50.436" level="INFO">Element 'css=div.window-box' is displayed.</msg>
+<status status="PASS" starttime="20210825 20:36:50.412" endtime="20210825 20:36:50.437"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210825 20:36:50.437" endtime="20210825 20:36:52.573"/>
+</kw>
+<status status="PASS" starttime="20210825 20:36:44.849" endtime="20210825 20:36:52.574"/>
+</test>
+<test id="s1-t3" name="Chat Window Appearance - New chat window and scroll to element">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/auto/APPEARANCE/ScrollToElement.html</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210825 20:36:52.577" level="INFO">Opening browser 'Chrome' to base url 'https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/auto/APPEARANCE/ScrollToElement.html'.</msg>
+<status status="PASS" starttime="20210825 20:36:52.577" endtime="20210825 20:36:55.131"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=synalio-iframe</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210825 20:36:55.132" endtime="20210825 20:36:55.143"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>id=synalio-iframe</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20210825 20:36:55.144" level="INFO">Selecting frame 'id=synalio-iframe'.</msg>
+<status status="PASS" starttime="20210825 20:36:55.143" endtime="20210825 20:36:55.165"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210825 20:36:58.168" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210825 20:36:55.165" endtime="20210825 20:36:58.168"/>
+</kw>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>css=div.window-box</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20210825 20:36:58.179" level="INFO">Element 'css=div.window-box' did not exist.</msg>
+<status status="PASS" starttime="20210825 20:36:58.170" endtime="20210825 20:36:58.179"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20210825 20:36:58.180" endtime="20210825 20:36:58.182"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,2048)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20210825 20:36:58.183" level="INFO">Executing JavaScript:
+window.scrollTo(0,2048)
+Without any arguments.</msg>
+<status status="PASS" starttime="20210825 20:36:58.182" endtime="20210825 20:36:58.189"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>id=synalio-iframe</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20210825 20:36:58.189" level="INFO">Selecting frame 'id=synalio-iframe'.</msg>
+<status status="PASS" starttime="20210825 20:36:58.189" endtime="20210825 20:36:58.211"/>
+</kw>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>css=div.window-box</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20210825 20:36:58.218" level="INFO">Element 'css=div.window-box' did not exist.</msg>
+<status status="PASS" starttime="20210825 20:36:58.212" endtime="20210825 20:36:58.218"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20210825 20:36:58.218" endtime="20210825 20:36:58.221"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,3096)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20210825 20:36:58.222" level="INFO">Executing JavaScript:
+window.scrollTo(0,3096)
+Without any arguments.</msg>
+<status status="PASS" starttime="20210825 20:36:58.221" endtime="20210825 20:36:58.226"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>id=synalio-iframe</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20210825 20:36:58.227" level="INFO">Selecting frame 'id=synalio-iframe'.</msg>
+<status status="PASS" starttime="20210825 20:36:58.227" endtime="20210825 20:36:58.246"/>
+</kw>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>css=div.window-box</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20210825 20:36:58.254" level="INFO">Element 'css=div.window-box' did not exist.</msg>
+<status status="PASS" starttime="20210825 20:36:58.247" endtime="20210825 20:36:58.255"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20210825 20:36:58.255" endtime="20210825 20:36:58.257"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,10000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20210825 20:36:58.258" level="INFO">Executing JavaScript:
+window.scrollTo(0,10000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20210825 20:36:58.258" endtime="20210825 20:36:58.274"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210825 20:37:01.278" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210825 20:36:58.275" endtime="20210825 20:37:01.278"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>id=synalio-iframe</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20210825 20:37:01.280" level="INFO">Selecting frame 'id=synalio-iframe'.</msg>
+<status status="PASS" starttime="20210825 20:37:01.280" endtime="20210825 20:37:01.303"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>css=div.window-box</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210825 20:37:01.327" level="INFO">Element 'css=div.window-box' is displayed.</msg>
+<status status="PASS" starttime="20210825 20:37:01.304" endtime="20210825 20:37:01.328"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20210825 20:37:01.329" endtime="20210825 20:37:01.333"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210825 20:37:01.333" endtime="20210825 20:37:03.509"/>
+</kw>
+<status status="PASS" starttime="20210825 20:36:52.577" endtime="20210825 20:37:03.511"/>
+</test>
+<test id="s1-t4" name="Chat Window Appearance - New chat window and toggle button">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://eugenechangresola.github.io/WebbotPages/STG/AUTO/chatwindow_togglebutton.html</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210825 20:37:03.521" level="INFO">Opening browser 'Chrome' to base url 'https://eugenechangresola.github.io/WebbotPages/STG/AUTO/chatwindow_togglebutton.html'.</msg>
+<status status="PASS" starttime="20210825 20:37:03.521" endtime="20210825 20:37:05.759"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=synalio-iframe</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210825 20:37:05.760" endtime="20210825 20:37:05.770"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>id=synalio-iframe</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20210825 20:37:05.772" level="INFO">Selecting frame 'id=synalio-iframe'.</msg>
+<status status="PASS" starttime="20210825 20:37:05.771" endtime="20210825 20:37:05.800"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210825 20:37:08.807" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210825 20:37:05.800" endtime="20210825 20:37:08.807"/>
+</kw>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>css=div.window-box</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20210825 20:37:08.834" level="INFO">Element 'css=div.window-box' exists but is not displayed.</msg>
+<status status="PASS" starttime="20210825 20:37:08.808" endtime="20210825 20:37:08.834"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20210825 20:37:08.835" endtime="20210825 20:37:08.838"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=togglebutton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210825 20:37:08.840" level="INFO">Clicking button 'id=togglebutton'.</msg>
+<status status="PASS" starttime="20210825 20:37:08.838" endtime="20210825 20:37:08.898"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210825 20:37:09.903" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210825 20:37:08.899" endtime="20210825 20:37:09.903"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>id=synalio-iframe</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20210825 20:37:09.904" level="INFO">Selecting frame 'id=synalio-iframe'.</msg>
+<status status="PASS" starttime="20210825 20:37:09.904" endtime="20210825 20:37:09.927"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>css=div.window-box</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210825 20:37:09.947" level="INFO">Element 'css=div.window-box' is displayed.</msg>
+<status status="PASS" starttime="20210825 20:37:09.928" endtime="20210825 20:37:09.947"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210825 20:37:09.948" endtime="20210825 20:37:12.121"/>
+</kw>
+<status status="PASS" starttime="20210825 20:37:03.520" endtime="20210825 20:37:12.122"/>
+</test>
+<status status="PASS" starttime="20210825 20:36:21.847" endtime="20210825 20:37:12.125"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Test Open Page">Test Open Page</stat>
+<stat pass="4" fail="0" skip="0" id="s1" name="[draft]PROD Web ChatWindow AppearanceCheck">[draft]PROD Web ChatWindow AppearanceCheck</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20210825 19:58:23.536" level="ERROR">Error in file 'C:\Users\Eugene\Documents\GitHub\EugeneChangResola.github.io\WebbotPages\robot\test_open_page.robot' on line 4: Importing library 'C:\Users\Eugene\Documents\GitHub\EugeneChangResola.github.io\WebbotPages\robot\EdgePlugin.py' failed: ImportError: attempted relative import with no known parent package
-Traceback (most recent call last):
-  File "C:\Users\Eugene\Documents\GitHub\EugeneChangResola.github.io\WebbotPages\robot\EdgePlugin.py", line 8, in &lt;module&gt;
-    from .chromeOptions import ChromiumOptions
-PYTHONPATH:
-  C:\Users\Eugene\AppData\Local\Programs\Python\Python39\Scripts\robot.exe
-  c:\users\eugene\appdata\local\programs\python\python39\python39.zip
-  c:\users\eugene\appdata\local\programs\python\python39\DLLs
-  c:\users\eugene\appdata\local\programs\python\python39\lib
-  c:\users\eugene\appdata\local\programs\python\python39
-  c:\users\eugene\appdata\local\programs\python\python39\lib\site-packages</msg>
 </errors>
 </robot>
