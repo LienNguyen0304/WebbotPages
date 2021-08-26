@@ -30,7 +30,7 @@ Chat Window Appearance - New chat window and page loaded
     Close Browser
 
 Chat Window Appearance - New chat window and scroll to element
-    Open Browser    https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/auto/APPEARANCE/ScrollToElement.html   Chrome
+    Open Browser    https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/auto/APPEARANCE/ScrollToElement.html    Chrome
     Wait Until Page Contains Element    id=synalio-iframe
     Select Frame    id=synalio-iframe
     Sleep    3
@@ -52,7 +52,7 @@ Chat Window Appearance - New chat window and scroll to element
     Close Browser
 
 Chat Window Appearance - New chat window and toggle button
-    Open Browser    https://eugenechangresola.github.io/WebbotPages/STG/AUTO/chatwindow_togglebutton.html    Chrome
+    Open Browser    https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/auto/APPEARANCE/togglebutton.html    Chrome
     Wait Until Page Contains Element    id=synalio-iframe
     Select Frame    id=synalio-iframe
     Sleep    3
@@ -64,10 +64,9 @@ Chat Window Appearance - New chat window and toggle button
     Element Should Be Visible    css=div.window-box
     Close Browser
 
-*** Comments ***
 # Old Chat window section:
 Chat Window Appearance- Old chat window and N seconds
-    Open Browser    https://eugenechangresola.github.io/WebbotPages/STG/AUTO/chatwindow_old_Nseconds.html    Chrome
+    Open Browser    https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/auto/APPEARANCE/Old_NSeconds.html    Chrome
     Page Should Not Contain Element    id=synalio-iframe
     Sleep    18
     Page Should Contain Element    id=synalio-iframe
@@ -75,20 +74,22 @@ Chat Window Appearance- Old chat window and N seconds
     Element Should Be Visible    css=.synalio-chat-window-toggled > .synalio-chat-header
     Close Browser
 
-Chat Window Appearance - Old chat window and page loaded
-    Open Browser    https://eugenechangresola.github.io/WebbotPages/STG/AUTO/chatwindow_old_pageload.html    Chrome
-    Wait Until Page Contains Element    id=synalio-iframe
-    Sleep    2
-    Select Frame    id=synalio-iframe
-    Element Should Be Visible    css=div.synalio-chat-window-toggled.synalio-border
-    Close Browser
-
 Chat Window Appearance - Old chat window and toggle button
-    Open Browser    https://eugenechangresola.github.io/WebbotPages/STG/AUTO/chatwindow_old_togglebutton.html    Chrome
+    Open Browser    https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/auto/APPEARANCE/Old_togglebutton.html    Chrome
     Wait Until Element Is Visible    id=togglebutton
     Click Button    id=togglebutton
     Sleep    2
     Wait Until Page Contains Element    id=synalio-iframe
     Select Frame    id=synalio-iframe
     Element Should Be Visible    css=div.synalio-chat-window > div.synalio-chat-header.synalio-border-radius
+    Close Browser
+
+*** Comments ***
+# Skip this test it duplicated with other test script
+Chat Window Appearance - Old chat window and page loaded
+    Open Browser    https://eugenechangresola.github.io/WebbotPages/PROD/SYNALIO/auto/APPEARANCE/    Chrome
+    Wait Until Page Contains Element    id=synalio-iframe
+    Sleep    2
+    Select Frame    id=synalio-iframe
+    Element Should Be Visible    css=div.synalio-chat-window-toggled.synalio-border
     Close Browser
