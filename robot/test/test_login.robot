@@ -1,8 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
-Plugins    EdgePlugin
 Library    Dialogs
-
+Resource    test_open_page.robot
 
 # Library    Selenium2Library
 
@@ -18,6 +17,11 @@ Library    Dialogs
 # app : QA
 
 *** Test Cases ***
+Test 1
+      Open web page and login
+
+
+*** Comments ***
 PEP - LINEWORKS Chat Window : App settings and Scenario Editor DEMO Bot display check
    Open Browser    https://pep.stg.resola.net/user/login    Edge   options=use_chromium=True
    Wait Until Page Contains Element    css=form > input.btn.btn-common-page.form-control

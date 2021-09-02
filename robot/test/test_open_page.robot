@@ -1,11 +1,24 @@
 *** Settings ***
 # Library    Zoomba.GUILibrary    plugins=Zoomba.Helpers.EdgePlugin
 Library    SeleniumLibrary
+Library    BuiltIn
+Variables    userinfo.py
+Metadata    Test Env    Staging
+Force Tags     Smoke
+Default Tags    Admin    Login
 
-*** Test Cases ***
-Open web Page
-    Open Browser    https://news.google.co.jp    chrome
-    Sleep    20
+*** Keywords ***
+Open web page and login
+    [Documentation]    Login synalio with scenario v2 account
+    Open Browser    https://synalio.stg.resola.net/app    chrome
+    Sleep    5
+    Wait Until Page Contains Element    css=form > input.btn.btn-common-page.form-control
+    Wait Until Element Is Visible    css=form > input.btn.btn-common-page.form-control
+    Input Text    id=id_username    ${USERNAME}
+    Input Password    id=id_password    ${PASSWORD}
+    Click Button    css=form > input.btn.btn-common-page.form-control
+    Wait Until Element Is Visible    css=body > div.wrapper > aside > div.userbase-box > a > img:nth-child(1)
+    # Sleep    20
     Close Browser
 
 

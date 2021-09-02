@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210830 20:56:58.757" rpa="false" schemaversion="2">
+<suite id="s1" name="Test Link Button" source="C:\Users\Eugene\Documents\GitHub\EugeneChangResola.github.io\WebbotPages\robot\test\test_link_button.robot">
+<test id="s1-t1" name="Link button test (_blank)">
+<kw name="Set Log Level" library="BuiltIn">
+<arg>NONE</arg>
+<doc>Sets the log threshold to the specified level and returns the old level.</doc>
+<status status="PASS" starttime="20210830 20:56:58.963" endtime="20210830 20:56:58.963"/>
+</kw>
+<kw name="Open chat bot test page and wait for chat window appeared">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://eugenechangresola.github.io/WebbotPages/STG/AUTO/V2/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" starttime="20210830 20:56:58.964" endtime="20210830 20:57:05.963"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=synalio-iframe</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210830 20:57:05.963" endtime="20210830 20:57:05.976"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>id=synalio-iframe</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" starttime="20210830 20:57:05.976" endtime="20210830 20:57:05.981"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css=div.window-box</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210830 20:57:05.981" endtime="20210830 20:57:07.030"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=div.inner-box-img-box</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20210830 20:57:07.030" endtime="20210830 20:57:07.260"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css=div.chat-block</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210830 20:57:07.260" endtime="20210830 20:57:10.205"/>
+</kw>
+<status status="PASS" starttime="20210830 20:56:58.963" endtime="20210830 20:57:10.205"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_FIELD}</arg>
+<arg>text</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" starttime="20210830 20:57:10.206" endtime="20210830 20:57:10.226"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SUBMIT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20210830 20:57:10.226" endtime="20210830 20:57:10.490"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="FAIL" starttime="20210830 20:57:10.490" endtime="20210830 20:57:14.610"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//span[contains(text(), 'text link')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210830 20:57:14.612" endtime="20210830 20:57:14.612"/>
+</kw>
+<kw name="Check new opened page and URL">
+<status status="NOT RUN" starttime="20210830 20:57:14.612" endtime="20210830 20:57:14.612"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>id=synalio-iframe</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="NOT RUN" starttime="20210830 20:57:14.613" endtime="20210830 20:57:14.613"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_FIELD}</arg>
+<arg>form</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210830 20:57:14.614" endtime="20210830 20:57:14.614"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SUBMIT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210830 20:57:14.615" endtime="20210830 20:57:14.616"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20210830 20:57:14.616" endtime="20210830 20:57:14.616"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//span[contains(text(), 'Form Link')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210830 20:57:14.617" endtime="20210830 20:57:14.617"/>
+</kw>
+<kw name="Check new opened page and URL">
+<status status="NOT RUN" starttime="20210830 20:57:14.617" endtime="20210830 20:57:14.618"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>id=synalio-iframe</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="NOT RUN" starttime="20210830 20:57:14.618" endtime="20210830 20:57:14.618"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_FIELD}</arg>
+<arg>script</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210830 20:57:14.618" endtime="20210830 20:57:14.618"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SUBMIT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210830 20:57:14.619" endtime="20210830 20:57:14.619"/>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<doc>Handles the current alert and returns its message.</doc>
+<status status="NOT RUN" starttime="20210830 20:57:14.619" endtime="20210830 20:57:14.619"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20210830 20:57:14.620" endtime="20210830 20:57:14.620"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//span[contains(text(), 'Script Link')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210830 20:57:14.620" endtime="20210830 20:57:14.620"/>
+</kw>
+<kw name="Check new opened page and URL">
+<status status="NOT RUN" starttime="20210830 20:57:14.620" endtime="20210830 20:57:14.620"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>id=synalio-iframe</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="NOT RUN" starttime="20210830 20:57:14.621" endtime="20210830 20:57:14.621"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_FIELD}</arg>
+<arg>carousel</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210830 20:57:14.621" endtime="20210830 20:57:14.621"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SUBMIT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210830 20:57:14.621" endtime="20210830 20:57:14.621"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20210830 20:57:14.622" endtime="20210830 20:57:14.622"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//span[contains(text(), 'Car Link')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210830 20:57:14.622" endtime="20210830 20:57:14.622"/>
+</kw>
+<kw name="Check new opened page and URL">
+<status status="NOT RUN" starttime="20210830 20:57:14.623" endtime="20210830 20:57:14.623"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20210830 20:57:14.624" endtime="20210830 20:57:14.624"/>
+</kw>
+<status status="FAIL" starttime="20210830 20:56:58.962" endtime="20210830 20:57:14.624">Execution terminated by signal</status>
+</test>
+<status status="FAIL" starttime="20210830 20:56:58.759" endtime="20210830 20:57:14.627"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test Link Button">Test Link Button</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
