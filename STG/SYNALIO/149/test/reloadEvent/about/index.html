@@ -33,13 +33,13 @@
   <button onclick="changeUrl('about')">about</button>
   <button onclick="changeUrl('products')">products</button>
   <button onclick="changeUrl('FAQ')">FAQ</button>
-  <button onclick="changeUrl(Download)">Download</button>
+  <button onclick="changeUrl('Download')">Download</button>
 </div>
 <script type="text/javascript">
     function changeUrl(url) {
       ///////////////////////////////////////////////////
       // This to simulate react-router behavior
-      const nextURL = "https://eugenechangresola.github.io/WebbotPages/STG/SYNALIO/test/reloadEvent/"; // << You test site url
+      const nextURL = ""; // << You test site url
       const nextTitle = 'My new page title';
       const nextState = { additionalInformation: 'Updated the URL with JS' };
       // This will create a new entry in the browser's history, without reloading
