@@ -17,46 +17,56 @@
     <script>synalioEvent({'event_type':'custom', 'name': 'CVP_カスタムスクリプト獲得', 'price':0})</script>
     <!-- satori new js -->
     <script>
-    var satori = (function (){
-  function getCookie(name) {
-    var result = null;
+      var satori = (function (){
+      function getCookie(name) {
+        var result = null;
 
-    var cookieName = name + '=';
-    var allcookies = document.cookie;
-    var position = allcookies.indexOf(cookieName);
-    if (position != -1) {
-      var startIndex = position + cookieName.length;
+        var cookieName = name + '=';
+        var allcookies = document.cookie;
+        var position = allcookies.indexOf(cookieName);
+        if (position != -1) {
+          var startIndex = position + cookieName.length;
 
-      var endIndex = allcookies.indexOf(';', startIndex);
-      if (endIndex == -1) {
-        endIndex = allcookies.length;
+          var endIndex = allcookies.indexOf(';', startIndex);
+          if (endIndex == -1) {
+            endIndex = allcookies.length;
+          }
+
+          result = decodeURIComponent(
+            allcookies.substring(startIndex, endIndex));
+        }
+
+        return result;
       }
 
-      result = decodeURIComponent(
-        allcookies.substring(startIndex, endIndex));
+      return {
+        onLoad: function () {
+          var st_segs = getCookie("st_segs");
+          if (st_segs === null || !st_segs.length) {
+            return;
+          }
+          const array = st_segs.split(',');
+          synalio.addExtVal("st_segs", array);
+        },
+      }
+
+    })();
+    if (window.synalio) {
+      satori.onLoad();
+    } else {
+      window.addEventListener("load", satori.onLoad, true);
     }
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-184735157-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    return result;
-  }
+      gtag('config', 'UA-184735157-2');
+    </script>
 
-  return {
-    onLoad: function () {
-      var st_segs = getCookie("st_segs");
-      if (st_segs === null || !st_segs.length) {
-        return;
-      }
-      const array = st_segs.split(',');
-      synalio.addExtVal("st_segs", array);
-    },
-  }
-
-})();
-if (window.synalio) {
-  satori.onLoad();
-} else {
-  window.addEventListener("load", satori.onLoad, true);
-}
-</script>
 
     </head>
 <body>
