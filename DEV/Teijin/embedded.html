@@ -1,34 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-9">
-    <!-- auto redirect code -->
-    <!--
-    < meta http-equiv="Refresh" content="1; url='https://www.google.co.jp'" />
-    -->
-    <title>[Dev]Teijin用テストサイトです。</title>
-    <!-- Chat bot設置スクリプト -->
-    <script src="//teijin.dev.resola.net/api/chatbox?appid=d8691ee9316f4998a0d516f350c032e5&e=1" type="text/javascript"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-    <!-- 行動データ取得用スクリプト -->
-
-    <!-- コンバージョン計測スクリプト -->
-
+    <title>[TEIJIN DEV]Embedded chat bot test site</title>
+    <!-- Chat bot script paste below -->
 </head>
 <body>
-    <div id="divtitle">
-        <H1>[Dev]Teijin用テストサイトです。埋込み型です。</H1>
-    <hr>
-    ハロー、ここはTeijin専用のテストサイトです。
-    <br>
-    このチャットボット設置は<h3 style="color: #987654">Embedded Type</h3>
+    <div id="divtitle" style="background-color: #925c70;color: #660066;"><H1> QA Test site [Teijin DEV Env] - Embedded mode</H1></div>
+      <hr>
+      <div id=divsubtitle style="background-color: #cd9fce;">
+        <span>
+        Hello world, This is only for <font color="red">Teijin DEV</font>!!! Make sure what environment are you testing!
+        <span>
+        <br>
     </div>
-    <div id="campaign">
-        <H1>Campaign Test</H1>
-                <!-- Compaign code here -->
-    </div>
-    <div id="synalio-chat">埋込み型はここ
+    <div id="synalio-chat">
+        <script src="//dev.t-synalio.com/api/chatbox?appid=ac72b442fa5842ba94797636a6d667a1&e=1" type="text/javascript"></script>
     </div>
 </body>
 </html>
