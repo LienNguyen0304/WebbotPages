@@ -9,13 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://jp-salvacion.github.io/JP/STYLE/css_style.css">
     <!-- POPUP Developer mode : ignore start MA time -->
-    <script>
-    //  localStorage.setItem("_ecdebug", "true");
-     // localStorage.setItem("_ecDebugTargetAll", true);
-     // localStorage.setItem("_ecDebugStartAt", true);
-      localStorage.setItem("_rslgvry", "59bde227-01dd-40ec-bc08-7e8df0702a8c");
-      document.cookie = "_rslgvry=59bde227-01dd-40ec-bc08-7e8df0702a8c";
-      </script>
       <!-- MP POPUP script -->
     <script type="text/javascript" id="">!function(t,e,n){
         window.mpTrackerName=e;var c,a;window[window.mpTrackerName]=(a={data:[],custom:{}},function(){for(var t=function(t){return function(){return a.data.push([t].concat(Array.prototype.slice.call(arguments,0)))}},e="track page identify".split(" "),n=0;n<e.length;n++)a[e[n]]=t(e[n])}(),a.set=function(){var t=arguments[0],e={};e[t]=arguments[1],a.custom=Object.assign(a.custom,e)},a.init=function(t){a.v="1.0.0",a.trackerName=e,a.options=t||{}},(n=document.createElement("script")).type="text/javascript",
@@ -29,18 +22,30 @@
       </script>
     </head>
 <body>
-    <div id="divtitle"><H1><font color="yellow">STG/QC</font> QA Test site - MP / POPUP</H1>
+    <div id="divtitle"><H1><font color="yellow">STG/QC</font> QA Test site - MP BUY PAGE</H1>
     </div>
-    <h1 style="color: #441e1e;"> FOR Lien tesing </h1>
     <hr>
     <span>Hello world, This is only for <font color="yellow"><H3>STG</H3></font>!!! Make sure what environment are you testing!</span>
+    <h1> For Client Scenario Test - BUY CVP BUTTON PAGE </h1>
     <h2> Test App Configuration </h2>
     <pre>
       - OID : ba000000000040008000000000000000
       - PID : ba9d31a3da474eb79a7eab7f09c6e418
       - MAAID :
     </pre>
-    <h3> PATH: MP > POPUP (GOD MODE 3 Debug Parameters embedded) <h3>
+    <div>
+      <a href="purchased.html">
+      <h2> BUY 1 GET 1 FREE here!</h2>
+       <span>Move to purchased page from here</span>
+      </a>
+      <div>
+        <h4>Lottery pages link list</h4>
+        </div>
+      <ul>
+        <li><a href="lottery_1.html">Go To Lottery-1</a></li>
+        <li><a href="lottery_2.html">Go To Lottery-2</a></li>
+        </ul>
+     </div>
     <div id="userid">
         <h3> USER ID : </h3>
         <span id="UID1"></span>
@@ -66,5 +71,8 @@
       var text2 = document.getElementById('UID2');
       text2.textContent = uid2;
       </script>
+      <div style="padding:3vh;">
+        <button onclick="window.mpAnalytics.track('site.order.completed', {orderId: '12345678-buy-0000001',});">CONVERSION-BUY</button>
+        </div>
 </body>
 </html>
